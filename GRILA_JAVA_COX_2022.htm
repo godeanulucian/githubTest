@@ -1,0 +1,2531 @@
+
+<!-- @coxRecords -->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" prefix="dc: http://purl.org/dc/elements/1.1/">
+<head><meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to lucian."/><meta name="keywords" content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<meta name="dc:creator" content="lucian" />
+<meta name="dc:title" content="GRILA JAVA COX 2022" />
+
+
+
+<title>
+GRILA JAVA COX 2022
+</title>
+
+<!-- Made with executable version 7.0 Release 3 Build 0 -->
+
+<!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+
+
+
+<style>
+
+
+/* This is the CSS stylesheet used in the exercise. */
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+/* BeginCorePageCSS */
+
+/* Made with executable version 7.0 Release 3 Build 0 */
+
+
+
+/* CSS variables for colours. */
+:root{
+	--strFontFace:       Geneva,Arial,sans-serif;
+	--strFontSize:       medium;
+	--strTextColor:      #000000;
+	--strTitleColor:     #000000;
+
+	--strFuncLightColor: #ffffff;
+	--strFuncShadeColor: #7f7f7f;
+	--strLinkColor:      #0000FF;
+	--strVLinkColor:     #0000CC;
+	
+	--strNavBarColor:    #000000;
+	--strNavLightColor:  #7f7f7f;
+	--strNavShadeColor:  #000000;
+	--strNavTextColor:   #ffffff;
+	
+	--strPageBGColor:    #C0C0C0;
+	--strExBGColor:      #FFFFFF;
+}
+
+body{
+	font-family: var(--strFontFace);
+	background-color: var(--strPageBGColor);
+	color: var(--strTextColor);
+ 
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: var(--strFontSize);
+	padding-bottom: 0.5em;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+table,div,span,td{
+	font-size: 1em;
+	color: var(--strTextColor);
+}
+
+div.Titles{
+	padding: 0.5em;;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+button{
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	display: inline;
+}
+
+.ExerciseTitle{
+	font-size: 140%;
+	color: var(--strTitleColor);
+}
+
+.ExerciseSubtitle{
+	font-size: 120%;
+	color: var(--strTitleColor);
+}
+
+div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
+	background-color: var(--strExBGColor);
+	text-align: center;
+	font-size: 1em;
+	color: var(--strTextColor);
+	padding: 0.5em;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: var(--strTextColor);
+	margin-bottom: 1px;
+}
+
+div.ReadingContainer, div.ExerciseContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}
+
+div#ContainerDiv{
+	margin: -1px;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/* EndCorePageCSS */
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", var(--strFontFace); 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", var(--strFontFace);
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div#Timer{
+	padding: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: var(--strTitleColor);
+}
+
+span#TimerText{
+	padding: 0.25em;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: var(--strTitleColor);
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
+	color: var(--strTitleColor);
+}
+
+.LeftItem{
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+.RightItem{
+	font-weight: bold;
+	font-size: 1em;
+	color: var(--strTextColor);
+	text-align: left;
+}
+
+span.CorrectMark{
+
+}
+
+input, textarea{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+}
+
+select{
+	font-size: 1em;
+}
+
+div.Feedback {
+	background-color: var(--strPageBGColor);
+	left: 33%;
+	width: 34%;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: var(--strTitleColor);
+	position: absolute;
+	display: none;
+	font-size: 1em;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: var(--strTextColor);
+}
+
+/* JMatch standard output table. */
+table.MatchTable{
+	margin: 2em auto; 
+	border-width: 0;
+}
+
+/* JMatch flashcard styles */
+table.FlashcardTable{
+	background-color: transparent;
+	color: var(--strTextColor);
+	border-color: var(--strTextColor);
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	/*width: 90%;*/
+	position: relative;
+	text-align: center;
+	padding: 0px;
+}
+
+table.FlashcardTable tr{
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--strExBGColor);
+}
+
+table.FlashcardTable td.Showing{
+	font-size: 140%;
+	text-align: center;
+	width: 50%;
+	display: table-cell;
+	padding: 2em;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+	background-color: var(--strPageBGColor);
+}
+
+table.FlashcardTable td.Hidden{
+	display: none;
+}
+
+/* JMix styles */
+div.JMixDrag, div.JMatchDrag{
+	padding: 0;
+	background-color: var(--strPageBGColor);
+	border-style: none;
+}
+
+div#GuessDiv{
+	padding: 0.5em;
+	margin-bottom: 2em;
+}
+
+div#SegmentDiv{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+a.ExSegment{
+	font-size: 120%;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--strTextColor);
+	display: inline-block;
+	padding: 0.5em;
+	border: solid 1pt gray;
+	margin-bottom: 0.5em;
+}
+
+span.RemainingWordList{
+	font-style: italic;
+}
+
+div.DropLine {
+	position: absolute;
+	text-align: left;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--strTitleColor);
+	width: 80%;
+	left: 10%;
+}
+
+/* JCloze styles */
+
+.ClozeWordList{
+	text-align: center;
+	font-weight: bold;
+}
+
+div.ClozeBody{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 2.0
+}
+
+span.GapSpan{
+	font-weight: bold;
+}
+
+/* JCross styles */
+
+table.CrosswordGrid{
+	margin: auto auto 1em auto;
+	border-collapse: collapse;
+	padding: 0px;
+	background-color: #000000;
+}
+
+table.CrosswordGrid tbody tr td{
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 140%;
+	padding: 1px;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid span{
+	color: #000000;
+}
+
+table.CrosswordGrid td.BlankCell{
+	background-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid td.LetterOnlyCell{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+table.CrosswordGrid td.NumLetterCell{
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.NumLetterCellText{
+	cursor: pointer;
+	color: #000000;
+}
+
+.GridNum{
+	vertical-align: super;
+	font-size: 66%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.GridNum:hover, .GridNum:visited{
+	color: #000000;
+}
+
+table#Clues{
+	margin: auto;
+	vertical-align: top;
+}
+
+table#Clues td{
+	vertical-align: top;
+}
+
+table.ClueList{
+  margin: auto;
+}
+
+td.ClueNum{
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.Clue{
+	text-align: left;
+}
+
+div#ClueEntry{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+/* Keypad styles */
+
+div.Keypad{
+	text-align: center;
+	display: none; /* initially hidden, shown if needed */
+	margin-bottom: 0.5em;
+}
+
+div.Keypad button{
+	font-family: var(--strFontFace);
+	font-size: 120%;
+	background-color: #ffffff;
+	color: #000000;
+	width: 2em;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5em;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+}
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: var(--strFontFace);
+}
+
+.QuestionText{
+	text-align: left;
+	margin: 0px;
+	font-size: 1em;
+}
+
+.Answer{
+	font-size: 120%;
+}
+
+.PartialAnswer{
+	font-size: 120%;
+	letter-spacing: 0.1em;
+	color: var(--strTitleColor);
+}
+
+.Highlight{
+	color: #000000;
+	background-color: #ffff00;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+.FuncButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+
+	border-left-color: var(--strFuncLightColor);
+	border-top-color: var(--strFuncLightColor);
+	border-right-color: var(--strFuncShadeColor);
+	border-bottom-color: var(--strFuncShadeColor);
+	color: var(--strTextColor);
+	background-color: var(--strExBGColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+}
+
+.FuncButton:active {
+	box-shadow: none;
+}
+
+.FuncButton:hover{
+	color: var(--strExBGColor);
+	background-color: var(--strTextColor);
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	background-color: var(--strNavBarColor);
+	text-align: center;
+	margin: 0.25rem 0;
+	clear: both;
+	font-size: 1em;
+	padding: 0.2em;
+	box-sizing: border-box;
+}
+
+.NavButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+	
+	border-left-color: var(--strNavLightColor);
+	border-top-color: var(--strNavLightColor);
+	border-right-color: var(--strNavShadeColor);
+	border-bottom-color: var(--strNavShadeColor); 
+	background-color: var(--strNavBarColor);
+	color: var(--strNavTextColor);
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
+}
+
+.NavButton:active {
+	box-shadow: none;
+}
+
+.NavButton:hover{
+	color: var(--strNavBarColor);
+	background-color: var(--strNavTextColor);
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: var(--strLinkColor);
+}
+
+a:visited{
+	color: var(--strVLinkColor);
+}
+
+a:hover{
+	color: var(--strLinkColor);
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: var(--strFontFace);
+	font-size: 1em;
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 2em;
+	border-width: 1pt;
+	color: var(--strTextColor);
+	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+	background-color: var(--strExBGColor);
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+	touch-action: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+div.CardStyleCentered{
+	text-align: center;
+}
+
+.rtl{
+	text-align: right;
+	font-size: 140%;
+}
+
+
+</style>
+
+<script>
+
+//<![CDATA[
+
+<!--
+
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+//	var Output = Feedback + '<br /><br />';
+//	document.getElementById('FeedbackContent').innerHTML = Output;
+//	var FDiv = document.getElementById('FeedbackDiv');
+//	topZ++;
+//	FDiv.style.zIndex = topZ;
+//	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+//	FDiv.style.display = 'block';
+
+//	ShowElements(false, 'input');
+//	ShowElements(false, 'select');
+//	ShowElements(false, 'object');
+//	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+//	RefreshImages();
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+			}
+		} 
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].offsetWidth;
+	this.H = document.getElementsByTagName('body')[0].offsetHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	thisKey = e.keyCode;
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+		e.preventDefault();
+	}
+}
+
+window.addEventListener('keypress',SuppressBackspace,false);
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+	RefreshImages();
+
+}
+
+
+
+Imgs = new Array();
+
+function PreloadImages(){
+	var a = PreloadImages.arguments;
+	for (var i=0; i<a.length; i++){
+		Imgs[i] = new Image();
+		Imgs[i].src = a[i];
+	}
+}
+
+function RefreshImages(){
+	for (var i=0; i<document.images.length; i++){
+		if (document.images[i].name.substring(0,6) != 'NavBar'){
+			document.images[i].src = document.images[i].src;
+		}
+	}
+}
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//SELECTION OBJECT FOR TYPING WITH KEYPAD
+var selObj = null;
+            
+SelObj = function(box){
+	this.box = box;
+	this.selStart = this.box.selectionStart;
+	this.selEnd = this.box.selectionEnd;
+	this.selText = this.box.value.substring(this.selStart, this.selEnd);
+	return this;
+}
+
+function setSelText(newText){
+	var caretPos = this.selStart + newText.length;
+	var newValue = this.box.value.substring(0, this.selStart);
+	newValue += newText;
+	newValue += this.box.value.substring(this.selEnd, this.box.value.length);
+	this.box.value = newValue;
+	this.box.setSelectionRange(caretPos, caretPos);
+	this.box.focus();
+}
+SelObj.prototype.setSelText = setSelText;
+
+function setSelSelectionRange(start, end){
+	this.box.setSelectionRange(start, end);
+}
+SelObj.prototype.setSelSelectionRange = setSelSelectionRange;
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+
+
+
+
+
+
+//JQUIZ CORE JAVASCRIPT CODE
+
+var CurrQNum = 0;
+var CorrectIndicator = '&#x2714;';
+var IncorrectIndicator = '&#x2718;';
+var YourScoreIs = 'Your score is:';
+
+//New for 6.2.2.0
+var CompletedSoFar = 'Correct answers:';
+var ExerciseCompleted = 'You have completed the exercise.';
+var ShowCompletedSoFar = true;
+
+var ContinuousScoring = false;
+var CorrectFirstTime = '';
+var ShowCorrectFirstTime = false;
+var ShuffleQs = true;
+var ShuffleAs = true;
+var DefaultRight = 'Correct!';
+var DefaultWrong = 'Sorry! Incorrect.';
+var QsToShow = 113;
+var Score = 0;
+var Finished = false;
+var Qs = null;
+var QArray = new Array();
+var ShowingAllQuestions = false;
+var ShowAllQuestionsCaption = 'Show all questions';
+var ShowOneByOneCaption = 'Show questions one by one';
+var State = new Array();
+var Feedback = '';
+var TimeOver = false;
+var strInstructions = '';
+var Locked = false;
+
+//The following variable can be used to add a message explaining that
+//the question is finished, so no further marking will take place.
+var strQuestionFinished = '';
+
+function CompleteEmptyFeedback(){
+	var QNum, ANum;
+	for (QNum=0; QNum<I.length; QNum++){
+//Only do this if not multi-select
+		if (I[QNum][2] != '3'){
+  		for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+  			if (I[QNum][3][ANum][1].length < 1){
+  				if (I[QNum][3][ANum][2] > 0){
+  					I[QNum][3][ANum][1] = DefaultRight;
+  				}
+  				else{
+  					I[QNum][3][ANum][1] = DefaultWrong;
+  				}
+  			}
+  		}
+		}
+	}
+}
+
+function SetUpQuestions(){
+	var AList = new Array(); 
+	var QList = new Array();
+	var i, j;
+	Qs = document.getElementById('Questions');
+	while (Qs.getElementsByTagName('li').length > 0){
+		QList.push(Qs.removeChild(Qs.getElementsByTagName('li')[0]));
+	}
+	var DumpItem = 0;
+	if (QsToShow > QList.length){
+		QsToShow = QList.length;
+	}
+	while (QsToShow < QList.length){
+		DumpItem = Math.floor(QList.length*Math.random());
+		for (j=DumpItem; j<(QList.length-1); j++){
+			QList[j] = QList[j+1];
+		}
+		QList.length = QList.length-1;
+	}
+	if (ShuffleQs == true){
+		QList = Shuffle(QList);
+	}
+	if (ShuffleAs == true){
+		var As;
+		for (var i=0; i<QList.length; i++){
+			As = QList[i].getElementsByTagName('ol')[0];
+			if (As != null){
+  			AList.length = 0;
+				while (As.getElementsByTagName('li').length > 0){
+					AList.push(As.removeChild(As.getElementsByTagName('li')[0]));
+				}
+				AList = Shuffle(AList);
+				for (j=0; j<AList.length; j++){
+					As.appendChild(AList[j]);
+				}
+			}
+		}
+	}
+	
+	for (i=0; i<QList.length; i++){
+		Qs.appendChild(QList[i]);
+		QArray[QArray.length] = QList[i];
+	}
+
+//Show the first item
+	QArray[0].style.display = '';
+	
+//Now hide all except the first item
+	for (i=1; i<QArray.length; i++){
+		QArray[i].style.display = 'none';
+	}		
+	SetQNumReadout();
+	
+	SetFocusToTextbox();
+}
+
+function SetFocusToTextbox(){
+//if there's a textbox, set the focus in it
+	if (QArray[CurrQNum].getElementsByTagName('input')[0] != null){
+		QArray[CurrQNum].getElementsByTagName('input')[0].focus();
+//and show a keypad if there is one
+		if (document.getElementById('CharacterKeypad') != null){
+			document.getElementById('CharacterKeypad').style.display = 'block';
+		}
+	}
+	else{
+  	if (QArray[CurrQNum].getElementsByTagName('textarea')[0] != null){
+  		QArray[CurrQNum].getElementsByTagName('textarea')[0].focus();	
+//and show a keypad if there is one
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'block';
+			}
+		}
+//This added for 6.0.4.11: hide accented character buttons if no textbox
+		else{
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'none';
+			}
+		}
+	}
+}
+
+function ChangeQ(ChangeBy){
+//The following line prevents moving to another question until the current
+//question is answered correctly. Uncomment it to enable this behaviour. 
+//	if (State[CurrQNum][0] == -1){return;}
+	if (((CurrQNum + ChangeBy) < 0)||((CurrQNum + ChangeBy) >= QArray.length)){return;}
+	QArray[CurrQNum].style.display = 'none';
+	CurrQNum += ChangeBy;
+	QArray[CurrQNum].style.display = '';
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+	SetQNumReadout();
+	SetFocusToTextbox();
+}
+
+var HiddenReadingShown = false;
+function ShowSpecialReadingForQuestion(){
+//Undocumented function for showing specific reading text elements which change with each question
+//Added on 10/12/2004
+	if (document.getElementById('ReadingDiv') != null){
+		if (HiddenReadingShown == true){
+			document.getElementById('ReadingDiv').innerHTML = '';
+		}
+		if (QArray[CurrQNum] != null){
+//Fix for 6.0.4.25
+			var Children = QArray[CurrQNum].getElementsByTagName('div');
+			for (var i=0; i<Children.length; i++){
+			if (Children[i].className=="HiddenReading"){
+					document.getElementById('ReadingDiv').innerHTML = Children[i].innerHTML;
+					HiddenReadingShown = true;
+//Hide the ShowAllQuestions button to avoid confusion
+					if (document.getElementById('ShowMethodButton') != null){
+						document.getElementById('ShowMethodButton').style.display = 'none';
+					}
+				}
+			}	
+		}
+	}
+}
+
+function SetQNumReadout(){
+	document.getElementById('QNumReadout').innerHTML = (CurrQNum+1) + ' / ' + QArray.length;
+	if ((CurrQNum+1) >= QArray.length){
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'visible';
+		}
+	}
+	if (CurrQNum <= 0){
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'visible';
+		}
+	}
+}
+
+var I=new Array();
+I[0]=new Array();I[0][0]=100;
+I[0][1]='';
+I[0][2]='0';
+I[0][3]=new Array();
+I[0][3][0]=new Array('compilat','',0,0,1);
+I[0][3][1]=new Array('interpretat','',0,0,1);
+I[0][3][2]=new Array('compilat si interpretat','',1,100,1);
+I[1]=new Array();I[1][0]=100;
+I[1][1]='';
+I[1][2]='0';
+I[1][3]=new Array();
+I[1][3][0]=new Array('adevarata','',0,0,1);
+I[1][3][1]=new Array('falsa','',1,100,1);
+I[2]=new Array();I[2][0]=100;
+I[2][1]='';
+I[2][2]='0';
+I[2][3]=new Array();
+I[2][3][0]=new Array('cu ajutorul metodei dispose() pe care toate clasele o mostenesc din clasa Object','',0,0,1);
+I[2][3][1]=new Array('cu ajutorul metodei destroy() pe care toate clasele o mostenesc din clasa Object','',0,0,1);
+I[2][3][2]=new Array('cu ajutorul componentei Garbage collector','',1,100,1);
+I[3]=new Array();I[3][0]=100;
+I[3][1]='';
+I[3][2]='0';
+I[3][3]=new Array();
+I[3][3][0]=new Array('const int a=3','',0,0,1);
+I[3][3][1]=new Array('const b=3','',0,0,1);
+I[3][3][2]=new Array('public static final c=5','',1,100,1);
+I[4]=new Array();I[4][0]=100;
+I[4][1]='';
+I[4][2]='0';
+I[4][3]=new Array();
+I[4][3][0]=new Array('object, string','',0,0,1);
+I[4][3][1]=new Array('Connection, Statement','',0,0,1);
+I[4][3][2]=new Array('Integer, Double, Character','',1,100,1);
+I[5]=new Array();I[5][0]=100;
+I[5][1]='';
+I[5][2]='0';
+I[5][3]=new Array();
+I[5][3][0]=new Array('int []v=new int[5]','',1,100,1);
+I[5][3][1]=new Array('int *s','',0,0,1);
+I[5][3][2]=new Array('int v[]=new int(5)','',0,0,1);
+I[6]=new Array();I[6][0]=100;
+I[6][1]='';
+I[6][2]='0';
+I[6][3]=new Array();
+I[6][3][0]=new Array('3','',0,0,1);
+I[6][3][1]=new Array('5','',1,100,1);
+I[6][3][2]=new Array('2','',0,0,1);
+I[7]=new Array();I[7][0]=100;
+I[7][1]='';
+I[7][2]='0';
+I[7][3]=new Array();
+I[7][3][0]=new Array('in una din metodele doGet() sau doPost() (in functie de tipul cererii HTTP) pentru a raspunde cererii clientului(sau in metodele apelate din aceasta)','',1,100,1);
+I[7][3][1]=new Array('in main','',0,0,1);
+I[7][3][2]=new Array('in main si in metode apelate din main','',0,0,1);
+I[8]=new Array();I[8][0]=100;
+I[8][1]='';
+I[8][2]='0';
+I[8][3]=new Array();
+I[8][3][0]=new Array('cu ajutorul unui obiect de tip HtmlForm si a metodei getformParameter()','',0,0,1);
+I[8][3][1]=new Array('cu ajutorul unui vector de obiecte de tip FormParameter()','',0,0,1);
+I[8][3][2]=new Array('cu ajutorul unui obiect de tip HttpServletRequest si a metodei getParameter','',1,100,1);
+I[9]=new Array();I[9][0]=100;
+I[9][1]='';
+I[9][2]='0';
+I[9][3]=new Array();
+I[9][3][0]=new Array('cu ajutorul unui obiect de tip HttpServletResponse si a unui obiect de tip PrintWriter','',1,100,1);
+I[9][3][1]=new Array('cu ajutorul unui vector de obiecte de tip FormResponse()','',0,0,1);
+I[9][3][2]=new Array('cu ajutorul unui obiect de tip HtmlForm si a metodei sendFormParameter()','',0,0,1);
+I[10]=new Array();I[10][0]=100;
+I[10][1]='';
+I[10][2]='0';
+I[10][3]=new Array();
+I[10][3][0]=new Array('apeleze anumite servicii din Windows','',0,0,1);
+I[10][3][1]=new Array('apeleze metodele doGet() sau doPost() corespunzatoare','',1,100,1);
+I[10][3][2]=new Array('apeleze obiecte din datele introduse in form','',0,0,1);
+I[11]=new Array();I[11][0]=100;
+I[11][1]='';
+I[11][2]='0';
+I[11][3]=new Array();
+I[11][3][0]=new Array('ResultSet','',1,100,1);
+I[11][3][1]=new Array('RecordSet','',0,0,1);
+I[11][3][2]=new Array('DataSet','',0,0,1);
+I[12]=new Array();I[12][0]=100;
+I[12][1]='';
+I[12][2]='0';
+I[12][3]=new Array();
+I[12][3][0]=new Array('executeQuery()','',0,0,1);
+I[12][3][1]=new Array('executeUpdate()','',1,100,1);
+I[12][3][2]=new Array('executeDelete()','',0,0,1);
+I[13]=new Array();I[13][0]=100;
+I[13][1]='';
+I[13][2]='0';
+I[13][3]=new Array();
+I[13][3][0]=new Array('un obiect de tip DatabaseConnection','',0,0,1);
+I[13][3][1]=new Array('un obiect de tip DataSet','',0,0,1);
+I[13][3][2]=new Array('metoda statica getConnection() din clasa Drivermanager, careia i se transmi URL-ul catre baza de date, utilizatorul si parola','',1,100,1);
+I[14]=new Array();I[14][0]=100;
+I[14][1]='';
+I[14][2]='0';
+I[14][3]=new Array();
+I[14][3][0]=new Array('pentru transmiterea comenzilor SQL cu parametrii de intrare in interogari','',0,0,1);
+I[14][3][1]=new Array('pentru executarea procedurilor stocate pe baza de date','',0,0,1);
+I[14][3][2]=new Array('pentru transmiterea comenzilor SQL simple fara parametrii','',1,100,1);
+I[15]=new Array();I[15][0]=100;
+I[15][1]='';
+I[15][2]='0';
+I[15][3]=new Array();
+I[15][3][0]=new Array('getParameter()','',0,0,1);
+I[15][3][1]=new Array('getInt(), getString()','',1,100,1);
+I[15][3][2]=new Array('getFieldValue()','',0,0,1);
+I[16]=new Array();I[16][0]=100;
+I[16][1]='';
+I[16][2]='0';
+I[16][3]=new Array();
+I[16][3][0]=new Array('actualizari aplicate direct REsultSet-ului care sunt automat efectuate si asupra bazei de date','',1,100,1);
+I[16][3][1]=new Array('actualizari ale metodelor vechi din Java la cele noi','',0,0,1);
+I[16][3][2]=new Array('actualizari ale pachetelor vechi din Java la cele noi','',0,0,1);
+I[17]=new Array();I[17][0]=100;
+I[17][1]='';
+I[17][2]='0';
+I[17][3]=new Array();
+I[17][3][0]=new Array('string','',1,100,1);
+I[17][3][1]=new Array('char','',0,0,1);
+I[17][3][2]=new Array('int','',0,0,1);
+I[18]=new Array();I[18][0]=100;
+I[18][1]='';
+I[18][2]='0';
+I[18][3]=new Array();
+I[18][3][0]=new Array('reduc efortul de programare si cresc gradul de reutilizare al codului','',1,100,1);
+I[18][3][1]=new Array('complica procesul de programare dar cresc gradul de reutilizare al codului','',0,0,1);
+I[18][3][2]=new Array('complifica procesul de programare dar scad gradul de reutilizare al codului','',0,0,1);
+I[19]=new Array();I[19][0]=100;
+I[19][1]='';
+I[19][2]='0';
+I[19][3]=new Array();
+I[19][3][0]=new Array('o interfata care este implementata prin clasa List','',0,0,1);
+I[19][3][1]=new Array('o clasa care implementeaza interfata List printr-un vector care isi ajusteaza dimensiunea','',1,100,1);
+I[19][3][2]=new Array('un vector de lungime fixa','',0,0,1);
+I[20]=new Array();I[20][0]=100;
+I[20][1]='';
+I[20][2]='0';
+I[20][3]=new Array();
+I[20][3][0]=new Array('interfete de colectii, implementari ale acestor interfete si algoritmi pentru a le manipula','',1,100,1);
+I[20][3][1]=new Array('doar interfete de colectii','',0,0,1);
+I[20][3][2]=new Array('doar implementari ale obiectelor','',0,0,1);
+I[21]=new Array();I[21][0]=100;
+I[21][1]='';
+I[21][2]='0';
+I[21][3]=new Array();
+I[21][3][0]=new Array('implementare a interfetei List cu lisa dublu inlantuita','',1,100,1);
+I[21][3][1]=new Array('implementare a interfetei List cu ajutorul unui tabel de dispersie','',0,0,1);
+I[21][3][2]=new Array('implementarea interfetei list printr-un arbore rosu-negru','',0,0,1);
+I[22]=new Array();I[22][0]=100;
+I[22][1]='';
+I[22][2]='0';
+I[22][3]=new Array();
+I[22][3][0]=new Array('nu permite elemente duplicat si este ordonata','',0,0,1);
+I[22][3][1]=new Array('nu permite elemente duplicat si poate sa fie sau nu ordonata','',1,100,1);
+I[22][3][2]=new Array('permite lemente duplicat si nu e ordonata','',0,0,1);
+I[23]=new Array();I[23][0]=100;
+I[23][1]='';
+I[23][2]='0';
+I[23][3]=new Array();
+I[23][3][0]=new Array('elementele sunt ordonate pe baza valorii lor','',1,100,1);
+I[23][3][1]=new Array('elementele nu sunt ordonate','',0,0,1);
+I[23][3][2]=new Array('doar o pare din elemente sunt ordonate','',0,0,1);
+I[24]=new Array();I[24][0]=100;
+I[24][1]='';
+I[24][2]='0';
+I[24][3]=new Array();
+I[24][3][0]=new Array('un set de reguli pentru structurarea datelor in fisiere binare','',0,0,1);
+I[24][3][1]=new Array('un set de reguli pentru structurarea datelor in baze de date','',0,0,1);
+I[24][3][2]=new Array('un set  de reguli, specificatii si conventii pentru structurarea datelor in fisiere text','',1,100,1);
+I[25]=new Array();I[25][0]=100;
+I[25][1]='';
+I[25][2]='0';
+I[25][3]=new Array();
+I[25][3][0]=new Array('extensible markup language','',1,100,1);
+I[25][3][1]=new Array('xanax markup language','',0,0,1);
+I[25][3][2]=new Array('xerox markup language','',0,0,1);
+I[26]=new Array();I[26][0]=100;
+I[26][1]='';
+I[26][2]='0';
+I[26][3]=new Array();
+I[26][3][0]=new Array('fisierele cu extensia.jsp nu pot contine decat cod \u2026','',0,0,1);
+I[26][3][1]=new Array('jsp-urile nu separa continutul static de cel dinamin','',0,0,1);
+I[26][3][2]=new Array('extinde limbajul HTML, oferind posibilitatea integrarii de secvente de cod Java prin intermediul unor tag-uri speciale','',1,100,1);
+I[27]=new Array();I[27][0]=100;
+I[27][1]='';
+I[27][2]='0';
+I[27][3]=new Array();
+I[27][3][0]=new Array('arata ca niste fisiere HTML si pot sa genereze doar continut dinamic','',1,100,1);
+I[27][3][1]=new Array('arata ca niste fisiere HTML si pot sa genereze doar continut static','',0,0,1);
+I[27][3][2]=new Array('nu seamana deloc cu fisierele HTML ci mai degraba cu o aplicatie Java obisnuita','',0,0,1);
+I[28]=new Array();I[28][0]=100;
+I[28][1]='';
+I[28][2]='0';
+I[28][3]=new Array();
+I[28][3][0]=new Array('taguri, atribute si text','',1,100,1);
+I[28][3][1]=new Array('variabile de atribute si text','',0,0,1);
+I[28][3][2]=new Array('variabile, atribute si text','',0,0,1);
+I[29]=new Array();I[29][0]=100;
+I[29][1]='';
+I[29][2]='0';
+I[29][3]=new Array();
+I[29][3][0]=new Array('prin intermediul unor evenimente','',1,100,1);
+I[29][3][1]=new Array('?','',0,0,1);
+I[29][3][2]=new Array('?','',0,0,1);
+I[30]=new Array();I[30][0]=100;
+I[30][1]='';
+I[30][2]='0';
+I[30][3]=new Array();
+I[30][3][0]=new Array('pune in corespondenta cheile catre anumite valori','',1,100,1);
+I[30][3][1]=new Array('creeaza o harta grafica','',0,0,1);
+I[30][3][2]=new Array('creeaza o harta rutiera','',0,0,1);
+I[31]=new Array();I[31][0]=100;
+I[31][1]='';
+I[31][2]='0';
+I[31][3]=new Array();
+I[31][3][0]=new Array('4','',0,0,1);
+I[31][3][1]=new Array('10','',1,100,1);
+I[31][3][2]=new Array('1','',0,0,1);
+I[32]=new Array();I[32][0]=100;
+I[32][1]='';
+I[32][2]='0';
+I[32][3]=new Array();
+I[32][3][0]=new Array('o aplicatie desktop','',0,0,1);
+I[32][3][1]=new Array('o aplicatie cu baze de date','',0,0,1);
+I[32][3][2]=new Array('o componenta software pe parte de server, scrisa in Java si care extinde functionalitatea unui server (de obicei HTTP)','',1,100,1);
+I[33]=new Array();I[33][0]=100;
+I[33][1]='';
+I[33][2]='0';
+I[33][3]=new Array();
+I[33][3][0]=new Array('serverul o trimite mai departe unui servlet. Servlet-ul proceseaza cererea si construieste un raspuns (in HTML) care este returnat clientului','',1,100,1);
+I[33][3][1]=new Array('servletul o trimite mai departe unui administrator','',0,0,1);
+I[33][3][2]=new Array('serverul o pune intr-o lista de asteptare pe care administratorul o va solutiona','',0,0,1);
+I[34]=new Array();I[34][0]=100;
+I[34][1]='';
+I[34][2]='0';
+I[34][3]=new Array();
+I[34][3][0]=new Array('prin implementarea interfetei ApacheServlet','',0,0,1);
+I[34][3][1]=new Array('se creeaza o metoda de tip Servlet','',0,0,1);
+I[34][3][2]=new Array('prin extinderea clasei httpServlet','',1,100,1);
+I[35]=new Array();I[35][0]=100;
+I[35][1]='';
+I[35][2]='0';
+I[35][3]=new Array();
+I[35][3][0]=new Array('este apelata automat ca raspuns la cererea fiecarui client','',1,100,1);
+I[35][3][1]=new Array('se apeleaza doar cand porneste servletul','',0,0,1);
+I[35][3][2]=new Array('se apeleaza doar dupa ce servletul este incarcat','',0,0,1);
+I[36]=new Array();I[36][0]=100;
+I[36][1]='';
+I[36][2]='0';
+I[36][3]=new Array();
+I[36][3][0]=new Array('mai multe metode pot avea acelasi nume dar o signatura diferita','',1,100,1);
+I[36][3][1]=new Array('mai multe metode pot avea acelasi nume si aceeasi signatura','',0,0,1);
+I[36][3][2]=new Array('o metoda careia i se trnsmit la apel mai multi parametrii decat aceasta are','',0,0,1);
+I[37]=new Array();I[37][0]=100;
+I[37][1]='';
+I[37][2]='0';
+I[37][3]=new Array();
+I[37][3][0]=new Array('adevarata','',0,0,1);
+I[37][3][1]=new Array('falsa','',1,100,1);
+I[38]=new Array();I[38][0]=100;
+I[38][1]='';
+I[38][2]='0';
+I[38][3]=new Array();
+I[38][3][0]=new Array('creeaza un obiect al superclasei','',0,0,1);
+I[38][3][1]=new Array('apeleaza  metoda oarecare numita super()','',0,0,1);
+I[38][3][2]=new Array('apeleaza constructorul fara parametrii a clasei de baza','',1,100,1);
+I[39]=new Array();I[39][0]=100;
+I[39][1]='';
+I[39][2]='0';
+I[39][3]=new Array();
+I[39][3][0]=new Array('se aloca memorie o singura data indiferent de nuamru de obiecte de acel tip','',1,100,1);
+I[39][3][1]=new Array('se aloca memorie direct proportional de numarul de obiecte de acel tip','',0,0,1);
+I[39][3][2]=new Array('se aloca o zona de memorie de 30 de octeti pentru fiecare variabila statica','',0,0,1);
+I[40]=new Array();I[40][0]=100;
+I[40][1]='';
+I[40][2]='0';
+I[40][3]=new Array();
+I[40][3][0]=new Array('int x= Integer.parseInt(\u201C123\u201D);','',1,100,1);
+I[40][3][1]=new Array('Integer x2 = Integer.valueOf(\u201C123\u201D);','',1,100,1);
+I[40][3][2]=new Array('?','',0,0,1);
+I[41]=new Array();I[41][0]=100;
+I[41][1]='';
+I[41][2]='0';
+I[41][3]=new Array();
+I[41][3][0]=new Array('accesul la variabilele membre ale unui obiect se poate realiza doar cu ajutorul metodelor obiectului','',1,100,1);
+I[41][3][1]=new Array('accesul la metodele obiectului se poate realiza doar cu ajutorul variabileleor membre','',0,0,1);
+I[41][3][2]=new Array('accesul la variabilele membre se poate realiza doar din constructor','',0,0,1);
+I[42]=new Array();I[42][0]=100;
+I[42][1]='';
+I[42][2]='0';
+I[42][3]=new Array();
+I[42][3][0]=new Array('Root','',0,0,1);
+I[42][3][1]=new Array('Object','',1,100,1);
+I[42][3][2]=new Array('Root...','',0,0,1);
+I[43]=new Array();I[43][0]=100;
+I[43][1]='';
+I[43][2]='0';
+I[43][3]=new Array();
+I[43][3][0]=new Array('va afisa litera b','',0,0,1);
+I[43][3][1]=new Array('va afisa litera a','',0,0,1);
+I[43][3][2]=new Array('va genera eroare','',1,100,1);
+I[44]=new Array();I[44][0]=100;
+I[44][1]='';
+I[44][2]='0';
+I[44][3]=new Array();
+I[44][3][0]=new Array('7','',0,0,1);
+I[44][3][1]=new Array('33','',1,100,1);
+I[44][3][2]=new Array('expresia este...','',0,0,1);
+I[45]=new Array();I[45][0]=100;
+I[45][1]='';
+I[45][2]='0';
+I[45][3]=new Array();
+I[45][3][0]=new Array('0 1 2','',0,0,1);
+I[45][3][1]=new Array('1 2 3','',0,0,1);
+I[45][3][2]=new Array('3 2 1','',1,100,1);
+I[46]=new Array();I[46][0]=100;
+I[46][1]='';
+I[46][2]='0';
+I[46][3]=new Array();
+I[46][3][0]=new Array('implementam interfata MouseListener','',1,100,1);
+I[46][3][1]=new Array('implementam intefetele mouse over, mouseout si mouseclick','',0,0,1);
+I[46][3][2]=new Array('implementam interfata mousestaff','',0,0,1);
+I[47]=new Array();I[47][0]=100;
+I[47][1]='';
+I[47][2]='0';
+I[47][3]=new Array();
+I[47][3][0]=new Array('se selecteaza in Eclipse componenta si se alege din interfata evenimentul dorit pe care il vom edita','',0,0,1);
+I[47][3][1]=new Array('se face dublu click in eclipse pe componenta si se deschide rutina de tratare a evenimentului pe care o vom edita','',1,100,1);
+I[47][3][2]=new Array('trebuie creata o clasa care implementeaza interfata ce contine metodele de interes si o instanta a clasei respective se transmite ca parametru metodei addXXxListener a componentei','',0,0,1);
+I[48]=new Array();I[48][0]=100;
+I[48][1]='';
+I[48][2]='0';
+I[48][3]=new Array();
+I[48][3][0]=new Array('JMenu','',0,0,1);
+I[48][3][1]=new Array('JTabbedPane','',1,100,1);
+I[48][3][2]=new Array('JForm','',0,0,1);
+I[49]=new Array();I[49][0]=100;
+I[49][1]='';
+I[49][2]='0';
+I[49][3]=new Array();
+I[49][3][0]=new Array('String[] items = {\u201Cjan\u201D,\u201Dfeb\u201D,\u201Dmar\u2026.} JList lst = new Jlist(items); getContentPane().add(lst);','',1,100,1);
+I[50]=new Array();I[50][0]=100;
+I[50][1]='';
+I[50][2]='0';
+I[50][3]=new Array();
+I[50][3][0]=new Array('permite realizarea de aplicatii Java cu interfata...','',0,0,1);
+I[50][3][1]=new Array('?','',0,0,1);
+I[50][3][2]=new Array('Permite conectarea la baza de date si ofera metode pentru interogarea si actualizarea acestora','',1,100,1);
+I[51]=new Array();I[51][0]=100;
+I[51][1]='';
+I[51][2]='0';
+I[51][3]=new Array();
+I[51][3][0]=new Array('select, insert into, update, delete','',1,100,1);
+I[52]=new Array();I[52][0]=100;
+I[52][1]='';
+I[52][2]='0';
+I[52][3]=new Array();
+I[52][3][0]=new Array('cu ajutorul lui se pot declara secvnete de cod care se executa in regim de exclucere mutuala','',1,100,1);
+I[52][3][1]=new Array('cu ajutorul lui se pot declara fire de executie','',0,0,1);
+I[52][3][2]=new Array('cu ajutorul lui s epot realiza schimburi de informatii in retea','',0,0,1);
+I[53]=new Array();I[53][0]=100;
+I[53][1]='';
+I[53][2]='0';
+I[53][3]=new Array();
+I[53][3][0]=new Array('egala cu cea a firului de executie care l-a creat','',1,100,1);
+I[53][3][1]=new Array('mai mica decat cea a firului de executie care l-a creat','',0,0,1);
+I[53][3][2]=new Array('mai mare decat cea a firului de executie care l-a creat','',0,0,1);
+I[54]=new Array();I[54][0]=100;
+I[54][1]='';
+I[54][2]='0';
+I[54][3]=new Array();
+I[54][3][0]=new Array('crearea aplicatiilor cu interfata grafica','',1,100,1);
+I[54][3][1]=new Array('tratarea exceptiilor','',0,0,1);
+I[54][3][2]=new Array('lucru cu baze de date','',0,0,1);
+I[55]=new Array();I[55][0]=100;
+I[55][1]='';
+I[55][2]='0';
+I[55][3]=new Array();
+I[55][3][0]=new Array('cu ajutorul clasei Form','',0,0,1);
+I[55][3][1]=new Array('cu ajutorul clasei JavaWindow','',0,0,1);
+I[55][3][2]=new Array('cu ajutorul unei clase care extinde JFrame','',1,100,1);
+I[56]=new Array();I[56][0]=100;
+I[56][1]='';
+I[56][2]='0';
+I[56][3]=new Array();
+I[56][3][0]=new Array('stabilirea stilului, grosimii si formei pentru marginile unei componente','',0,0,1);
+I[56][3][1]=new Array('stabilirea doar a dimensiunii unei componenta','',0,0,1);
+I[56][3][2]=new Array('amplasarea componentei asupra careia se aplica intr-o anumita pozitie si stabilirea dimensiunii acelei componente','',1,100,1);
+I[57]=new Array();I[57][0]=100;
+I[57][1]='';
+I[57][2]='0';
+I[57][3]=new Array();
+I[57][3][0]=new Array('setarea continutului unei casete de text','',0,0,1);
+I[57][3][1]=new Array('setarea textului unui control JLabel','',0,0,1);
+I[57][3][2]=new Array('specificarea unui text care se va ivi atunci cand cursorul mouseului sta deasupra unei componente','',1,100,1);
+I[58]=new Array();I[58][0]=100;
+I[58][1]='';
+I[58][2]='0';
+I[58][3]=new Array();
+I[58][3][0]=new Array('MessageBox.Show(\u201CMesaj\u201D)','',0,0,1);
+I[58][3][1]=new Array('...(\u201CMesaj\u201D)','',0,0,1);
+I[58][3][2]=new Array('JOptionPane.showMessageDialog(null, \u201CMesaj\u201D)','',1,100,1);
+I[59]=new Array();I[59][0]=100;
+I[59][1]='';
+I[59][2]='0';
+I[59][3]=new Array();
+I[59][3][0]=new Array('in evenimentul JButton_CLick','',0,0,1);
+I[59][3][1]=new Array('in metoda ActionPerformed a unei clase ce implementeaza interfata ActionListener','',1,100,1);
+I[59][3][2]=new Array('in metoda...','',0,0,1);
+I[60]=new Array();I[60][0]=100;
+I[60][1]='';
+I[60][2]='0';
+I[60][3]=new Array();
+I[60][3][0]=new Array('trebuie sa specifice codul corespunzator metodelor din interfata dar poate sa declare variabile si metode care nu apar in interfata','',1,100,1);
+I[60][3][1]=new Array('trebuie sa specifice codul corespunzator metodelor din interfata dar nu poate sa eclare variabile si metode care nu apar in interfata','',0,0,1);
+I[60][3][2]=new Array('nu trebuie sa specifice codul corespunzator metodelor din interfata','',0,0,1);
+I[61]=new Array();I[61][0]=100;
+I[61][1]='';
+I[61][2]='0';
+I[61][3]=new Array();
+I[61][3][0]=new Array('1','',0,0,1);
+I[61][3][1]=new Array('>=1','',1,100,1);
+I[61][3][2]=new Array('0','',0,0,1);
+I[62]=new Array();I[62][0]=100;
+I[62][1]='';
+I[62][2]='0';
+I[62][3]=new Array();
+I[62][3][0]=new Array('doar o clasa','',0,0,1);
+I[62][3][1]=new Array('o clasa sau o clasa abstracta','',1,100,1);
+I[62][3][2]=new Array('o alta interfata','',0,0,1);
+I[63]=new Array();I[63][0]=100;
+I[63][1]='';
+I[63][2]='0';
+I[63][3]=new Array();
+I[63][3][0]=new Array('o exceptie este un eveniment care nu permiote continuarea normala a executiei propgramului','',1,100,1);
+I[63][3][1]=new Array('o variabila care are o valoare exceptional de mare','',0,0,1);
+I[63][3][2]=new Array('o functie care returneaza o valoare neobisnuita','',0,0,1);
+I[64]=new Array();I[64][0]=100;
+I[64][1]='';
+I[64][2]='0';
+I[64][3]=new Array();
+I[64][3][0]=new Array('try, catch, finnaly, throw, throws','',1,100,1);
+I[64][3][1]=new Array('super exception, fatal error','',0,0,1);
+I[64][3][2]=new Array('fatal warning, application exit, exceptional value','',0,0,1);
+I[65]=new Array();I[65][0]=100;
+I[65][1]='';
+I[65][2]='0';
+I[65][3]=new Array();
+I[65][3][0]=new Array('in interiorul oricarei metode','',0,0,1);
+I[65][3][1]=new Array('in exteriorul oricarei metode','',0,0,1);
+I[65][3][2]=new Array('in metode a caror definitie este insotita de o clauza throws in care apare tipul de exceptie respectiv','',1,100,1);
+I[66]=new Array();I[66][0]=100;
+I[66][1]='';
+I[66][2]='0';
+I[66][3]=new Array();
+I[66][3][0]=new Array('Indica seria de instructiuni in care pot sa apara exceptiile, tipul exceptiilor si modul in care se solutioneaza acestea','',1,100,1);
+I[66][3][1]=new Array('indica bucati de cod care pot contine erori de sintaca','',0,0,1);
+I[66][3][2]=new Array('...','',0,0,1);
+I[67]=new Array();I[67][0]=100;
+I[67][1]='';
+I[67][2]='0';
+I[67][3]=new Array();
+I[67][3][0]=new Array('reprezinta o zona de cod care se executa inainte de a iesi din program','',0,0,1);
+I[67][3][1]=new Array('reprezinta o zona de cod care se executa inainte de a iesi dintr-o metoda','',0,0,1);
+I[67][3][2]=new Array('reprezinta un mecanism prin care se forteaza executia unei portiuni de cod indiferent daca o exceptie a aparut sau nu','',1,100,1);
+I[68]=new Array();I[68][0]=100;
+I[68][1]='';
+I[68][2]='0';
+I[68][3]=new Array();
+I[68][3][0]=new Array('un fir de executie reprezinta actiunile pe care un utilizator le face asupra programului de la pornirea acestuia pana la inchiderea lui','',0,0,1);
+I[68][3][1]=new Array('un fir de executie reprezinta o inlantuire de instructiuni care se executa una dupa alta','',0,0,1);
+I[68][3][2]=new Array('firele de executie reprezinta portiuni de cod ale aceluiasi program care se pot executa in paralel una fata de alta','',1,100,1);
+I[69]=new Array();I[69][0]=100;
+I[69][1]='';
+I[69][2]='0';
+I[69][3]=new Array();
+I[69][3][0]=new Array('fie se creaza o clasa derivata din clasa Thread si in acea clasa se redefineste metoda run() fie se implementeaza interfata Runnable','',1,100,1);
+I[69][3][1]=new Array('se creeaza o metoda de tip runnable','',0,0,1);
+I[69][3][2]=new Array('se creaza cate o metoda de tip Thread pentru fiecare fir de executie','',0,0,1);
+I[70]=new Array();I[70][0]=100;
+I[70][1]='';
+I[70][2]='0';
+I[70][3]=new Array();
+I[70][3][0]=new Array('inceperea rualrii firului de executie','',1,100,1);
+I[70][3][1]=new Array('trecerea firului in starea gata de rulare','',0,0,1);
+I[70][3][2]=new Array('trecerea firului de executie in starea creat','',0,0,1);
+I[71]=new Array();I[71][0]=100;
+I[71][1]='';
+I[71][2]='0';
+I[71][3]=new Array();
+I[71][3][0]=new Array('Sleep 	Pune Threadul curent sa \u201Cdoarma\u201D pentru o anumita perioada de timp. Wait 	Pune Threadul curent sa astepte pana cand alt thread invoca metoda \u201C notify() \u201C sau \u201CnotifyAll()\u201D sau trece durata','',1,100,1);
+I[72]=new Array();I[72][0]=100;
+I[72][1]='';
+I[72][2]='0';
+I[72][3]=new Array();
+I[72][3][0]=new Array('decide modul in care sunt implementate componentele in cadrul unui container','',1,100,1);
+I[72][3][1]=new Array('cu ajutorul lui s epot specifica culorile si fontul containerelor?','',0,0,1);
+I[72][3][2]=new Array('cu ajutorul lui se pot gestiona servleturile','',0,0,1);
+I[73]=new Array();I[73][0]=100;
+I[73][1]='';
+I[73][2]='0';
+I[73][3]=new Array();
+I[73][3][0]=new Array('flowlayout','',0,0,1);
+I[73][3][1]=new Array('gridlayout','',0,0,1);
+I[73][3][2]=new Array('bordlayout','',1,100,1);
+I[74]=new Array();I[74][0]=100;
+I[74][1]='';
+I[74][2]='0';
+I[74][3]=new Array();
+I[74][3][0]=new Array('imparte container-ul in 5 regiuni (sus, jos, stanga, dreapta si centru)','',1,100,1);
+I[74][3][1]=new Array('amplaseaza controalele unul langa altul','',0,0,1);
+I[74][3][2]=new Array('amplaseaza controalele unul sub altul','',0,0,1);
+I[75]=new Array();I[75][0]=100;
+I[75][1]='';
+I[75][2]='0';
+I[75][3]=new Array();
+I[75][3][0]=new Array('amplaseaza controalele la coordonate specificate de utluzator(x,y)','',0,0,1);
+I[75][3][1]=new Array('amplaseaza controalele unul langa altul iar daca nu mai au loc pe orizontala sunt trecute pe urmatorul rand','',1,100,1);
+I[75][3][2]=new Array('amplaseaza controalele in celulele unui tabel','',0,0,1);
+I[76]=new Array();I[76][0]=100;
+I[76][1]='';
+I[76][2]='0';
+I[76][3]=new Array();
+I[76][3][0]=new Array('dezactiveaza layoutul pentru a putea adauga componente in myframe','',0,0,1);
+I[76][3][1]=new Array('dezactiveaza orice layoutmanager cu scopul de a putea amplasa controalele din contalinerul lui in pozitii absolute','',1,100,1);
+I[76][3][2]=new Array('...','',0,0,1);
+I[77]=new Array();I[77][0]=100;
+I[77][1]='';
+I[77][2]='0';
+I[77][3]=new Array();
+I[77][3][0]=new Array('metodele statice sunt similare functiilor obisnuite in C','',1,100,1);
+I[77][3][1]=new Array('metodele statice nu pot fi apelate decat din lte metode ale clasei care le contine','',0,0,1);
+I[77][3][2]=new Array('metodele statice nu pot contine declaratii de variabile','',0,0,1);
+I[78]=new Array();I[78][0]=100;
+I[78][1]='';
+I[78][2]='0';
+I[78][3]=new Array();
+I[78][3][0]=new Array('o clasa abstracta contine doar signaturi de metode','',0,0,1);
+I[78][3][1]=new Array('o clasa abstracta contine campuri si metode normale(pentru care se specifica o implementare dar si modele de metode care urmeaza sa fie implementate in mod obligatoriu de clasele care extind clasa abstracta)','',1,100,1);
+I[78][3][2]=new Array('o clasa abstracta nu contine metode','',0,0,1);
+I[79]=new Array();I[79][0]=100;
+I[79][1]='';
+I[79][2]='0';
+I[79][3]=new Array();
+I[79][3][0]=new Array('o interfata este formata din constante si signaturi de metode','',1,100,1);
+I[79][3][1]=new Array('termenul interface se utilizeaza doar cu privire la aspectul aplicatiei','',0,0,1);
+I[79][3][2]=new Array('o interfata contine atat metode neimplementate cat si metode implementate','',0,0,1);
+I[80]=new Array();I[80][0]=100;
+I[80][1]='';
+I[80][2]='0';
+I[80][3]=new Array();
+I[80][3][0]=new Array('extinsa doar de o alta clasa abstracta','',0,0,1);
+I[80][3][1]=new Array('extinsa doar de o interfata','',0,0,1);
+I[80][3][2]=new Array('extinsa de o alta clasa abstracta sau de o clasa normala','',1,100,1);
+I[81]=new Array();I[81][0]=100;
+I[81][1]='';
+I[81][2]='0';
+I[81][3]=new Array();
+I[81][3][0]=new Array('doar intr-o clasa abstracta','',1,100,1);
+I[81][3][1]=new Array('in interfete si in orice clasa','',0,0,1);
+I[81][3][2]=new Array('in orice \u2026','',0,0,1);
+I[82]=new Array();I[82][0]=100;
+I[82][1]='';
+I[82][2]='0';
+I[82][3]=new Array();
+I[82][3][0]=new Array('public','',1,100,1);
+I[82][3][1]=new Array('private','',0,0,1);
+I[82][3][2]=new Array('protected','',0,0,1);
+I[83]=new Array();I[83][0]=100;
+I[83][1]='';
+I[83][2]='0';
+I[83][3]=new Array();
+I[83][3][0]=new Array('...','',0,0,1);
+I[83][3][1]=new Array('Corecta. Variabilele membru statice, apartin claei nu obiectelor si este recomandata accesarea lor utilizand numele clasei care le contine','',1,100,1);
+I[83][3][2]=new Array('...','',0,0,1);
+I[84]=new Array();I[84][0]=100;
+I[84][1]='';
+I[84][2]='0';
+I[84][3]=new Array();
+I[84][3][0]=new Array('Collections.sort(pers, new Compara_nume()); unde Compara_Nume este o clasa ce implementeaza interfata Comparator','',1,100,1);
+I[84][3][1]=new Array('...','',0,0,1);
+I[84][3][2]=new Array('...','',0,0,1);
+I[85]=new Array();I[85][0]=100;
+I[85][1]='';
+I[85][2]='0';
+I[85][3]=new Array();
+I[85][3][0]=new Array('Apare o cerere HTTP de tip POST primita de servlet','',1,100,1);
+I[85][3][1]=new Array('?','',0,0,1);
+I[85][3][2]=new Array('?','',0,0,1);
+I[86]=new Array();I[86][0]=100;
+I[86][1]='';
+I[86][2]='0';
+I[86][3]=new Array();
+I[86][3][0]=new Array('?','',0,0,1);
+I[86][3][1]=new Array('De a asigura ca fisierul XML respecta o anumita structura','',1,100,1);
+I[86][3][2]=new Array('?','',0,0,1);
+I[87]=new Array();I[87][0]=100;
+I[87][1]='';
+I[87][2]='0';
+I[87][3]=new Array();
+I[87][3][0]=new Array('Este un standard stabilit de consortiul WEB si contine interfete pentru manipularea arborelui   de obiecte asociat unui document XML','',1,100,1);
+I[87][3][1]=new Array('?','',0,0,1);
+I[87][3][2]=new Array('?','',0,0,1);
+I[88]=new Array();I[88][0]=100;
+I[88][1]='';
+I[88][2]='0';
+I[88][3]=new Array();
+I[88][3][0]=new Array('corecta','',1,100,1);
+I[88][3][1]=new Array('incorecta','',0,0,1);
+I[89]=new Array();I[89][0]=100;
+I[89][1]='';
+I[89][2]='0';
+I[89][3]=new Array();
+I[89][3][0]=new Array('interfetele functionale sunt interfete care pot avea oricate metode abstracte si care  pot sa fie implementate prin expresii Lambda','',0,0,1);
+I[89][3][1]=new Array('interfete functionale sunt interfete care au maxim o metoda abstracta si a caror  implementare poate fi specificata prin expresiile Lambda','',1,100,1);
+I[89][3][2]=new Array('interfetele functionale sunt interfete care contin doar functii implicite','',0,0,1);
+I[90]=new Array();I[90][0]=100;
+I[90][1]='';
+I[90][2]='0';
+I[90][3]=new Array();
+I[90][3][0]=new Array('List <Integer lista = new ArrayList <Integer();','',1,100,1);
+I[90][3][1]=new Array('List <int lista = new ArrayList <int();','',0,0,1);
+I[90][3][2]=new Array('List <Integer lista = new List <Integer();','',0,0,1);
+I[90][3][3]=new Array('List <int lista = new List <int();','',0,0,1);
+I[91]=new Array();I[91][0]=100;
+I[91][1]='';
+I[91][2]='0';
+I[91][3]=new Array();
+I[91][3][0]=new Array('10','',0,0,1);
+I[91][3][1]=new Array('14','',0,0,1);
+I[91][3][2]=new Array('20','',1,100,1);
+I[91][3][3]=new Array('15','',0,0,1);
+I[92]=new Array();I[92][0]=100;
+I[92][1]='';
+I[92][2]='0';
+I[92][3]=new Array();
+I[92][3][0]=new Array('2','',0,0,1);
+I[92][3][1]=new Array('linia de cod e gresita si va determina eroare de compilare','',0,0,1);
+I[92][3][2]=new Array('1','',0,0,1);
+I[92][3][3]=new Array('8','',0,0,1);
+I[92][3][4]=new Array('4','',1,100,1);
+I[93]=new Array();I[93][0]=100;
+I[93][1]='';
+I[93][2]='0';
+I[93][3]=new Array();
+I[93][3][0]=new Array('incrementarea din functia metoda() a clasei Implementare nu este permisa','',1,100,1);
+I[93][3][1]=new Array('instantierea din prima linie a functiei main() este gresita','',0,0,1);
+I[93][3][2]=new Array('campul x nu este accesibil in linia 3 a functiei main','',0,0,1);
+I[93][3][3]=new Array('va afisa valoarea 7 pe ecran','',0,0,1);
+I[93][3][4]=new Array('va afisa valoarea 8 pe ecran','',0,0,1);
+I[94]=new Array();I[94][0]=100;
+I[94][1]='';
+I[94][2]='0';
+I[94][3]=new Array();
+I[94][3][0]=new Array('clasa Optional ofera facilitati pentru scrierea unui cod fara blocuri try...catch','',0,0,1);
+I[94][3][1]=new Array('clasa Optional ofera facilitati pentru scrierea unui cod fara multe teste ale null-ului','',1,100,1);
+I[94][3][2]=new Array('clasa Optional este o clasa iterator speciala care permite procesarea colectiilor de  obiecte intr-o maniera functionala','',0,0,1);
+I[95]=new Array();I[95][0]=100;
+I[95][1]='';
+I[95][2]='0';
+I[95][3]=new Array();
+I[95][3][0]=new Array('va afisa 0 pe ecran','',0,0,1);
+I[95][3][1]=new Array('va afisa 2 pe ecran //din cauza ca e public daca nu se pune nimic in fata la var  declarate din clasa','',1,100,1);
+I[95][3][2]=new Array('va determina eroare de compilare pentru ca variabila x neavand modificator de acces  este privata si deci neaccesibila din clasa MainApp','',0,0,1);
+I[96]=new Array();I[96][0]=100;
+I[96][1]='';
+I[96][2]='0';
+I[96][3]=new Array();
+I[96][3][0]=new Array('nu se va afisa Ionel 20, pe ecran pentru ca a fost omis apelul metodei toString()','',0,0,1);
+I[96][3][1]=new Array('modul de instantiere a obiectului artist este gresit','',0,0,1);
+I[96][3][2]=new Array('definitia clasei Artist este gresita','',0,0,1);
+I[96][3][3]=new Array('va afisa Ionel, 20 pe ecran','',1,100,1);
+I[97]=new Array();I[97][0]=100;
+I[97][1]='';
+I[97][2]='0';
+I[97][3]=new Array();
+I[97][3][0]=new Array('5 7','',0,0,1);
+I[97][3][1]=new Array('4 7','',1,100,1);
+I[97][3][2]=new Array('5 5','',0,0,1);
+I[97][3][3]=new Array('3 7','',0,0,1);
+I[97][3][4]=new Array('Secventa nu poate fi rulata','',0,0,1);
+I[98]=new Array();I[98][0]=100;
+I[98][1]='';
+I[98][2]='0';
+I[98][3]=new Array();
+I[98][3][0]=new Array('va genera eroare de compilare, atribuirea b = a; nefiind permisa','',0,0,1);
+I[98][3][1]=new Array('a[0] = 99 b[0] = 4','',0,0,1);
+I[98][3][2]=new Array('a[0] = 99 b[0] = 1','',0,0,1);
+I[98][3][3]=new Array('a[0] = 99 b[0] = 99','',1,100,1);
+I[99]=new Array();I[99][0]=100;
+I[99][1]='';
+I[99][2]='0';
+I[99][3]=new Array();
+I[99][3][0]=new Array('va afisa 2.33 pe ecran','',0,0,1);
+I[99][3][1]=new Array('va genera eroare de compilare datorita apelului func\u021Biei printf, functie care nu exista  in Java','',0,0,1);
+I[99][3][2]=new Array('va genera eroare de compilare datorita incercarii de a initializa o variabila de tip float  cu o valoare de tip double','',1,100,1);
+I[100]=new Array();I[100][0]=100;
+I[100][1]='';
+I[100][2]='0';
+I[100][3]=new Array();
+I[100][3][0]=new Array('va genera eroare de compilare datorita incercarii de a da unui obiect o valoare  primitiva','',0,0,1);
+I[100][3][1]=new Array('va afisa 2 pe ecran','',0,0,1);
+I[100][3][2]=new Array('va afisa 3 pe ecran','',1,100,1);
+I[101]=new Array();I[101][0]=100;
+I[101][1]='';
+I[101][2]='0';
+I[101][3]=new Array();
+I[101][3][0]=new Array('va genera eroare de compilare, numele nefiind accesibil din clasa Angajat','',1,100,1);
+I[101][3][1]=new Array('intr-o alta clasa nu se poate declara obiect de tipul clasei interioare','',0,0,1);
+I[101][3][2]=new Array('variabila a, nu poate sa fie accesata din ClasaInterioara pentru ca este privata','',0,0,1);
+I[101][3][3]=new Array('intr-o alta clasa se poate declara obiect de tipul clasei interioare in felul urmator: ClasaExterioara.ClasaInterioara o = new ClasaExterioara.ClasaInterioara();','',0,0,1);
+I[102]=new Array();I[102][0]=100;
+I[102][1]='';
+I[102][2]='0';
+I[102][3]=new Array();
+I[102][3][0]=new Array('intr-o alta clasa se poate declara obiect de tipul clasei interioare in felul urmator: ClasaExterioara o1 = new ClasaExterioara(0; ClasaExterioara.ClasaInterioara o2 = o1.new ClasaInterioara();','',1,100,1);
+I[102][3][1]=new Array('intr-o alta clasa nu se poate declara obiect de tipul clasei interioare','',0,0,1);
+I[102][3][2]=new Array('variabila a, nu poate sa fie accesata din ClasaInterioara pentru ca este privata','',0,0,1);
+I[102][3][3]=new Array('intr-o alta clasa se poate declara obiect de tipul clasei interioare in felul urmator: ClasaExterioara.ClasaInterioara o = new ClasaExterioara.ClasaInterioara();','',0,0,1);
+I[103]=new Array();I[103][0]=100;
+I[103][1]='';
+I[103][2]='0';
+I[103][3]=new Array();
+I[103][3][0]=new Array('va afisa ABC pe ecran','',0,0,1);
+I[103][3][1]=new Array('va afisa abc pe ecran','',1,100,1);
+I[103][3][2]=new Array('va genera eroare de compilare pentru ca intializarea lui s trebuie sa se faca  String s = new String(\u201Cabc\u201D);','',0,0,1);
+I[104]=new Array();I[104][0]=100;
+I[104][1]='';
+I[104][2]='0';
+I[104][3]=new Array();
+I[104][3][0]=new Array('015','',0,0,1);
+I[104][3][1]=new Array('15','',0,0,1);
+I[104][3][2]=new Array('13','',1,100,1);
+I[105]=new Array();I[105][0]=100;
+I[105][1]='';
+I[105][2]='0';
+I[105][3]=new Array();
+I[105][3][0]=new Array('Eclipse cu plugin instalat pt dezvoltarea de aplicatii Android','',0,0,1);
+I[105][3][1]=new Array('NetBeans','',0,0,1);
+I[105][3][2]=new Array('Android Studio','',1,100,1);
+I[106]=new Array();I[106][0]=100;
+I[106][1]='';
+I[106][2]='0';
+I[106][3]=new Array();
+I[106][3][0]=new Array('Rescource.nume_resursa','',0,0,1);
+I[106][3][1]=new Array('R tipul_resursei.nume_resursa','',1,100,1);
+I[106][3][2]=new Array('Resource.id_resursa','',0,0,1);
+I[107]=new Array();I[107][0]=100;
+I[107][1]='';
+I[107][2]='0';
+I[107][3]=new Array();
+I[107][3][0]=new Array('SQLiteOpenHelper','',0,0,1);
+I[107][3][1]=new Array('R tipul_resursei.nume_resursa','',1,100,1);
+I[107][3][2]=new Array('Resource.id_resursa','',0,0,1);
+I[108]=new Array();I[108][0]=100;
+I[108][1]='';
+I[108][2]='0';
+I[108][3]=new Array();
+I[108][3][0]=new Array('alb','',0,0,1);
+I[108][3][1]=new Array('alb rosu','',0,0,1);
+I[108][3][2]=new Array('alb rosu negru','',1,100,1);
+I[109]=new Array();I[109][0]=100;
+I[109][1]='';
+I[109][2]='0';
+I[109][3]=new Array();
+I[109][3][0]=new Array('5 7','',0,0,1);
+I[109][3][1]=new Array('4 7','',1,100,1);
+I[109][3][2]=new Array('3 7','',0,0,1);
+I[109][3][3]=new Array('5 5','',0,0,1);
+I[109][3][4]=new Array('secventa nu poate fi rulata','',0,0,1);
+I[110]=new Array();I[110][0]=100;
+I[110][1]='';
+I[110][2]='0';
+I[110][3]=new Array();
+I[110][3][0]=new Array('1.0','',0,0,1);
+I[110][3][1]=new Array('2.0','',0,0,1);
+I[110][3][2]=new Array('4.0','',1,100,1);
+I[111]=new Array();I[111][0]=100;
+I[111][1]='';
+I[111][2]='0';
+I[111][3]=new Array();
+I[111][3][0]=new Array('chitara are 6 corzi si culoarea neagra','',0,0,1);
+I[111][3][1]=new Array('va afisa diverse. Chitara @ si o valoare in hexa','',0,0,1);
+I[111][3][2]=new Array('secventa nu poate fi rulata','',1,100,1);
+I[112]=new Array();I[112][0]=100;
+I[112][1]='';
+I[112][2]='0';
+I[112][3]=new Array();
+I[112][3][0]=new Array('1111','',0,0,1);
+I[112][3][1]=new Array('0101','',0,0,1);
+I[112][3][2]=new Array('10101','',0,0,1);
+I[112][3][3]=new Array('10111','',1,100,1);
+I[112][3][4]=new Array('00100011','',0,0,1);
+
+
+function StartUp(){
+
+//If there's only one question, no need for question navigation controls
+	if (QsToShow < 2){
+		document.getElementById('QNav').style.display = 'none';
+	}
+	
+//Stash the instructions so they can be redisplayed
+	strInstructions = document.getElementById('InstructionsDiv').innerHTML;
+	
+
+	
+
+	
+
+	PreloadImages('https://static.javatpoint.com/java/swing/images/java-jtabbedpane1.png');
+
+	
+	CompleteEmptyFeedback();
+
+	SetUpQuestions();
+	ClearTextBoxes();
+	CreateStatusArray();
+	
+
+	
+//Check search string for q parameter
+	if (document.location.search.length > 0){
+		if (ShuffleQs == false){
+			var JumpTo = parseInt(document.location.search.substring(1,document.location.search.length))-1;
+			if (JumpTo <= QsToShow){
+				ChangeQ(JumpTo);
+			}
+		}
+	}
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+}
+
+function ShowHideQuestions(){
+	document.getElementById('ShowMethodButton').style.display = 'none';
+	if (ShowingAllQuestions == false){
+		for (var i=0; i<QArray.length; i++){
+				QArray[i].style.display = '';
+			}
+		document.getElementById('Questions').style.listStyleType = 'decimal';
+		document.getElementById('OneByOneReadout').style.display = 'none';
+		document.getElementById('ShowMethodButton').innerHTML = ShowOneByOneCaption;
+		ShowingAllQuestions = true;
+	}
+	else{
+		for (var i=0; i<QArray.length; i++){
+				if (i != CurrQNum){
+					QArray[i].style.display = 'none';
+				}
+			}
+		document.getElementById('Questions').style.listStyleType = 'none';
+		document.getElementById('OneByOneReadout').style.display = '';
+		document.getElementById('ShowMethodButton').innerHTML = ShowAllQuestionsCaption;
+		ShowingAllQuestions = false;	
+	}
+	document.getElementById('ShowMethodButton').style.display = 'inline';
+}
+
+function CreateStatusArray(){
+	var QNum, ANum;
+//For each item in the item array
+	for (QNum=0; QNum<I.length; QNum++){
+//Check if the question still exists (hasn't been nuked by showing a random selection)
+		if (document.getElementById('Q_' + QNum) != null){
+			State[QNum] = new Array();
+			State[QNum][0] = -1; //Score for this q; -1 shows question not done yet
+			State[QNum][1] = new Array(); //answers
+			for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+				State[QNum][1][ANum] = 0; //answer not chosen yet; when chosen, will store its position in the series of choices
+			}
+			State[QNum][2] = 0; //tries at this q so far
+			State[QNum][3] = 0; //incrementing percent-correct values of selected answers
+			State[QNum][4] = 0; //penalties incurred for hints
+			State[QNum][5] = ''; //Sequence of answers chosen by number
+		}
+		else{
+			State[QNum] = null;
+		}
+	}
+}
+
+
+
+function CheckMCAnswer(QNum, ANum, Btn){
+//if question doesn't exist, bail
+	if (State[QNum].length < 1){return;}
+	
+//Get the feedback
+	Feedback = I[QNum][3][ANum][1];
+	
+//Now show feedback and bail if question already complete
+	if (State[QNum][0] > -1){
+//Add an extra message explaining that the question
+// is finished if defined by the user
+		if (strQuestionFinished.length > 0){Feedback += '<br />' + strQuestionFinished;}
+//Show the feedback
+		ShowMessage(Feedback);
+//New for 6.2.2.1: If you want to mark an answer as correct even when it's the final choice, uncomment this line.
+//		if (I[QNum][3][ANum][2] >= 1){Btn.innerHTML = CorrectIndicator;}else{Btn.innerHTML = IncorrectIndicator;}	
+		return;
+	}
+	
+//Hide the button while processing
+	Btn.style.display = 'none';
+
+//Increment the number of tries
+	State[QNum][2]++;
+	
+//Add the percent-correct value of this answer
+	State[QNum][3] += I[QNum][3][ANum][3];
+	
+//Store the try number in the answer part of the State array, for tracking purposes
+	State[QNum][1][ANum] = State[QNum][2];
+	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
+	State[QNum][5] += String.fromCharCode(65+ANum);
+	
+//Should this answer be accepted as correct?
+	if (I[QNum][3][ANum][2] < 1){
+//It's wrong
+
+//Mark the answer
+		Btn.innerHTML = IncorrectIndicator;
+		
+//Remove any previous score unless exercise is finished (6.0.3.8+)
+		if (Finished == false){
+			WriteToInstructions(strInstructions);
+		}	
+		
+//Check whether this leaves just one MC answer unselected, in which case the Q is terminated
+		var RemainingAnswer = FinalAnswer(QNum);
+		if (RemainingAnswer > -1){
+//Behave as if the last answer had been selected, but give no credit for it
+//Increment the number of tries
+			State[QNum][2]++;		
+		
+//Calculate the score for this question
+			CalculateMCQuestionScore(QNum);
+			
+//Get the overall score and add it to the feedback
+			CalculateOverallScore();
+//New for 6.2.2.1
+			var QsDone = CheckQuestionsCompleted();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+			else{
+				WriteToInstructions(QsDone);
+			}
+		}
+	}
+	else{
+//It's right
+//Mark the answer
+		Btn.innerHTML = CorrectIndicator;
+				
+//Calculate the score for this question
+		CalculateMCQuestionScore(QNum);
+		
+//New for 6.2.2.0
+		var QsDone = CheckQuestionsCompleted();
+
+//Get the overall score and add it to the feedback
+		if (ContinuousScoring == true){
+			CalculateOverallScore();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+		}
+		else{
+			WriteToInstructions(QsDone);
+		}
+	}
+	
+//Show the button again
+	Btn.style.display = 'inline';
+	
+//Finally, show the feedback	
+	ShowMessage(Feedback);
+	
+//Check whether all questions are now done
+	CheckFinished();
+}
+
+function CalculateMCQuestionScore(QNum){
+	var Tries = State[QNum][2] + State[QNum][4]; //include tries and hint penalties
+	var PercentCorrect = State[QNum][3];
+	var TotAns = GetTotalMCAnswers(QNum);
+	var HintPenalties = State[QNum][4];
+	
+//Make sure it's not already complete
+
+	if (State[QNum][0] < 0){
+//Allow for Hybrids
+		if (HintPenalties >= 1){
+			State[QNum][0] = 0;
+		}
+		else{
+//This line calculates the score for this question
+			if (TotAns == 1){
+				State[QNum][0] = 1;
+			}
+			else{
+				State[QNum][0] = ((TotAns-((Tries*100)/State[QNum][3]))/(TotAns-1));
+			}
+		}
+//Fix for Safari bug added for version 6.0.3.42 (negative infinity problem)
+		if ((State[QNum][0] < 0)||(State[QNum][0] == Number.NEGATIVE_INFINITY)){
+			State[QNum][0] = 0;
+		}
+	}
+}
+
+function GetTotalMCAnswers(QNum){
+	var Result = 0;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			Result++;
+		}
+	}
+	return Result;
+}
+
+function FinalAnswer(QNum){
+	var UnchosenAnswers = 0;
+	var FinalAnswer = -1;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			if (State[QNum][1][ANum] < 1){ //This answer hasn't been chosen yet
+				UnchosenAnswers++;
+				FinalAnswer = ANum;
+			}
+		}
+	}
+	if (UnchosenAnswers == 1){
+		return FinalAnswer;
+	}
+	else{
+		return -1;
+	}
+}
+
+
+
+
+
+function CalculateOverallScore(){
+	var TotalWeighting = 0;
+	var TotalScore = 0;
+	
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] > -1){
+				TotalWeighting += I[QNum][0];
+				TotalScore += (I[QNum][0] * State[QNum][0]);
+			}
+		}
+	}
+	if (TotalWeighting > 0){
+		Score = Math.floor((TotalScore/TotalWeighting)*100);
+	}
+	else{
+//if TotalWeighting is 0, no questions so far have any value, so 
+//no penalty should be shown.
+		Score = 100; 
+	}
+}
+
+//New for 6.2.2.0
+function CheckQuestionsCompleted(){
+	if (ShowCompletedSoFar == false){return '';}
+	var QsCompleted = 0;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] >= 0){
+				QsCompleted++;
+			}
+		}
+	}
+//Fixes for 6.2.2.2
+	if (QsCompleted >= QArray.length){
+		return ExerciseCompleted;
+	}
+	else{
+		return CompletedSoFar + ' ' + QsCompleted + '/' + QArray.length + '.';
+	}
+}
+
+function CheckFinished(){
+	var FB = '';
+	var AllDone = true;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] < 0){
+				AllDone = false;
+			}
+		}
+	}
+	if (AllDone == true){
+	
+//Report final score and submit if necessary
+		CalculateOverallScore();
+		FB = YourScoreIs + ' ' + Score + '%.';
+		if (ShowCorrectFirstTime == true){
+			var CFT = 0;
+			for (QNum=0; QNum<State.length; QNum++){
+				if (State[QNum] != null){
+					if (State[QNum][0] >= 1){
+						CFT++;
+					}
+				}
+			}
+			FB += '<br />' + CorrectFirstTime + ' ' + CFT + '/' + QsToShow;
+		}
+		
+//New for 6.2.2.0
+		FB += '<br />' + ExerciseCompleted;
+		
+		WriteToInstructions(FB);
+		
+		Finished == true;
+
+
+
+
+		TimeOver = true;
+		Locked = true;
+		
+
+
+		Finished = true;
+		Detail = '<?xml version="1.0"?><hpnetresult><fields>';
+		for (QNum=0; QNum<State.length; QNum++){
+			if (State[QNum] != null){
+				if (State[QNum][5].length > 0){
+					Detail += '<field><fieldname>Question #' + (QNum+1) + '</fieldname><fieldtype>question-tracking</fieldtype><fieldlabel>Q ' + (QNum+1) + '</fieldlabel><fieldlabelid>QuestionTrackingField</fieldlabelid><fielddata>' + State[QNum][5] + '</fielddata></field>';
+				}
+			}
+		}
+		Detail += '</fields></hpnetresult>';
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody" >
+
+<!-- BeginTopNavButtons -->
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle">GRILA JAVA COX 2022</h2>
+
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions"></div>
+</div>
+
+
+<div id="ContainerDiv">
+
+
+
+<div class="ExerciseContainer">
+
+<div id="QNav" class="QuestionNavigation">
+
+<p style="text-align: right;">
+<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">Show all questions</button>
+</p>
+
+<div id="OneByOneReadout">
+<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;">&lt;=</button>
+
+<span id="QNumReadout" class="QNum">&#160;</span>
+
+<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;">=&gt;</button>
+<br />
+</div>
+
+</div>
+ 
+<ol class="QuizQuestions" id="Questions">
+<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">1. Limbajul Java este:</div><ol class="MCAnswers"><li id="Q_0_0"><button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">?</button>&#160;&#160;compilat</li><li id="Q_0_1"><button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">?</button>&#160;&#160;interpretat</li><li id="Q_0_2"><button class="FuncButton" id="Q_0_2_Btn" onclick="CheckMCAnswer(0,2,this)">?</button>&#160;&#160;compilat si interpretat</li></ol></li>
+<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">2. Cum este afirmatia &#x201C;Java permite mostenirea multipla&#x201D;:</div><ol class="MCAnswers"><li id="Q_1_0"><button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">?</button>&#160;&#160;adevarata</li><li id="Q_1_1"><button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">?</button>&#160;&#160;falsa</li></ol></li>
+<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">3. Cum se realizeaza dezalocarea memoriei nefolosite in Java:</div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">?</button>&#160;&#160;cu ajutorul metodei dispose() pe care toate clasele o mostenesc din clasa Object</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">?</button>&#160;&#160;cu ajutorul metodei destroy() pe care toate clasele o mostenesc din clasa Object</li><li id="Q_2_2"><button class="FuncButton" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">?</button>&#160;&#160;cu ajutorul componentei Garbage collector</li></ol></li>
+<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText">4. Care din urmatoarele variante se poate utiliza pentru declararea unei constante in Java:</div><ol class="MCAnswers"><li id="Q_3_0"><button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">?</button>&#160;&#160;const int a=3</li><li id="Q_3_1"><button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">?</button>&#160;&#160;const b=3</li><li id="Q_3_2"><button class="FuncButton" id="Q_3_2_Btn" onclick="CheckMCAnswer(3,2,this)">?</button>&#160;&#160;public static final c=5</li></ol></li>
+<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText">5. Incercuiti clasele infasuratoare:</div><ol class="MCAnswers"><li id="Q_4_0"><button class="FuncButton" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">?</button>&#160;&#160;object, string</li><li id="Q_4_1"><button class="FuncButton" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">?</button>&#160;&#160;Connection, Statement</li><li id="Q_4_2"><button class="FuncButton" id="Q_4_2_Btn" onclick="CheckMCAnswer(4,2,this)">?</button>&#160;&#160;Integer, Double, Character</li></ol></li>
+<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">6. Precizati care din urmatoarele declaratii este corecta:</div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">?</button>&#160;&#160;int []v=new int[5]</li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">?</button>&#160;&#160;int *s</li><li id="Q_5_2"><button class="FuncButton" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">?</button>&#160;&#160;int v[]=new int(5)</li></ol></li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText">7. Mentionati ce va afisa urmatoarea secventa de cod:<br />int []v=new int[5]<br />v[0]=1<br />v[1]=4<br />v[2]=8<br />System.out.println(v.length)</div><ol class="MCAnswers"><li id="Q_6_0"><button class="FuncButton" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">?</button>&#160;&#160;3</li><li id="Q_6_1"><button class="FuncButton" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">?</button>&#160;&#160;5</li><li id="Q_6_2"><button class="FuncButton" id="Q_6_2_Btn" onclick="CheckMCAnswer(6,2,this)">?</button>&#160;&#160;2</li></ol></li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">8. Unde poate fi scris codul unui servlet:</div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">?</button>&#160;&#160;in una din metodele doGet() sau doPost() (in functie de tipul cererii HTTP) pentru a raspunde cererii clientului(sau in metodele apelate din aceasta)</li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">?</button>&#160;&#160;in main</li><li id="Q_7_2"><button class="FuncButton" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">?</button>&#160;&#160;in main si in metode apelate din main</li></ol></li>
+<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText">9. Cum pot fi preluati parametrii completati intr-un form ai unui servlet?</div><ol class="MCAnswers"><li id="Q_8_0"><button class="FuncButton" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">?</button>&#160;&#160;cu ajutorul unui obiect de tip HtmlForm si a metodei getformParameter()</li><li id="Q_8_1"><button class="FuncButton" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">?</button>&#160;&#160;cu ajutorul unui vector de obiecte de tip FormParameter()</li><li id="Q_8_2"><button class="FuncButton" id="Q_8_2_Btn" onclick="CheckMCAnswer(8,2,this)">?</button>&#160;&#160;cu ajutorul unui obiect de tip HttpServletRequest si a metodei getParameter</li></ol></li>
+<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText">10. Cum poate raspunde un servlet la cererea unui client?</div><ol class="MCAnswers"><li id="Q_9_0"><button class="FuncButton" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">?</button>&#160;&#160;cu ajutorul unui obiect de tip HttpServletResponse si a unui obiect de tip PrintWriter</li><li id="Q_9_1"><button class="FuncButton" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">?</button>&#160;&#160;cu ajutorul unui vector de obiecte de tip FormResponse()</li><li id="Q_9_2"><button class="FuncButton" id="Q_9_2_Btn" onclick="CheckMCAnswer(9,2,this)">?</button>&#160;&#160;cu ajutorul unui obiect de tip HtmlForm si a metodei sendFormParameter()</li></ol></li>
+<li class="QuizQuestion" id="Q_10" style="display: none;"><div class="QuestionText">11. Daca metoda service() nu este suprascrisa, atunci implementarea implicita a acesteia este sa:</div><ol class="MCAnswers"><li id="Q_10_0"><button class="FuncButton" id="Q_10_0_Btn" onclick="CheckMCAnswer(10,0,this)">?</button>&#160;&#160;apeleze anumite servicii din Windows</li><li id="Q_10_1"><button class="FuncButton" id="Q_10_1_Btn" onclick="CheckMCAnswer(10,1,this)">?</button>&#160;&#160;apeleze metodele doGet() sau doPost() corespunzatoare</li><li id="Q_10_2"><button class="FuncButton" id="Q_10_2_Btn" onclick="CheckMCAnswer(10,2,this)">?</button>&#160;&#160;apeleze obiecte din datele introduse in form</li></ol></li>
+<li class="QuizQuestion" id="Q_11" style="display: none;"><div class="QuestionText">12. Datele preluate cu tehnologia JDBC dintr-o baza de date se vor regasi intr-un obiect de tip:</div><ol class="MCAnswers"><li id="Q_11_0"><button class="FuncButton" id="Q_11_0_Btn" onclick="CheckMCAnswer(11,0,this)">?</button>&#160;&#160;ResultSet</li><li id="Q_11_1"><button class="FuncButton" id="Q_11_1_Btn" onclick="CheckMCAnswer(11,1,this)">?</button>&#160;&#160;RecordSet</li><li id="Q_11_2"><button class="FuncButton" id="Q_11_2_Btn" onclick="CheckMCAnswer(11,2,this)">?</button>&#160;&#160;DataSet</li></ol></li>
+<li class="QuizQuestion" id="Q_12" style="display: none;"><div class="QuestionText">13. O comanda SQL care sterge un rand dintr-o baza de date se poate executa cu ajutorul metodei:</div><ol class="MCAnswers"><li id="Q_12_0"><button class="FuncButton" id="Q_12_0_Btn" onclick="CheckMCAnswer(12,0,this)">?</button>&#160;&#160;executeQuery()</li><li id="Q_12_1"><button class="FuncButton" id="Q_12_1_Btn" onclick="CheckMCAnswer(12,1,this)">?</button>&#160;&#160;executeUpdate()</li><li id="Q_12_2"><button class="FuncButton" id="Q_12_2_Btn" onclick="CheckMCAnswer(12,2,this)">?</button>&#160;&#160;executeDelete()</li></ol></li>
+<li class="QuizQuestion" id="Q_13" style="display: none;"><div class="QuestionText">14. Pentru stabilirea unei conexiuni din Jaba catre baza de date se utilizeaza:</div><ol class="MCAnswers"><li id="Q_13_0"><button class="FuncButton" id="Q_13_0_Btn" onclick="CheckMCAnswer(13,0,this)">?</button>&#160;&#160;un obiect de tip DatabaseConnection</li><li id="Q_13_1"><button class="FuncButton" id="Q_13_1_Btn" onclick="CheckMCAnswer(13,1,this)">?</button>&#160;&#160;un obiect de tip DataSet</li><li id="Q_13_2"><button class="FuncButton" id="Q_13_2_Btn" onclick="CheckMCAnswer(13,2,this)">?</button>&#160;&#160;metoda statica getConnection() din clasa Drivermanager, careia i se transmi URL-ul catre baza de date, utilizatorul si parola</li></ol></li>
+<li class="QuizQuestion" id="Q_14" style="display: none;"><div class="QuestionText">15. Tehnologia JDBC utilizeaza un obiect de tip Statement:</div><ol class="MCAnswers"><li id="Q_14_0"><button class="FuncButton" id="Q_14_0_Btn" onclick="CheckMCAnswer(14,0,this)">?</button>&#160;&#160;pentru transmiterea comenzilor SQL cu parametrii de intrare in interogari</li><li id="Q_14_1"><button class="FuncButton" id="Q_14_1_Btn" onclick="CheckMCAnswer(14,1,this)">?</button>&#160;&#160;pentru executarea procedurilor stocate pe baza de date</li><li id="Q_14_2"><button class="FuncButton" id="Q_14_2_Btn" onclick="CheckMCAnswer(14,2,this)">?</button>&#160;&#160;pentru transmiterea comenzilor SQL simple fara parametrii</li></ol></li>
+<li class="QuizQuestion" id="Q_15" style="display: none;"><div class="QuestionText">16. In JDBC obtinerea valorilor campurilor dintr-o baza de date se realizeaza cu ajutorul unor metode precum:</div><ol class="MCAnswers"><li id="Q_15_0"><button class="FuncButton" id="Q_15_0_Btn" onclick="CheckMCAnswer(15,0,this)">?</button>&#160;&#160;getParameter()</li><li id="Q_15_1"><button class="FuncButton" id="Q_15_1_Btn" onclick="CheckMCAnswer(15,1,this)">?</button>&#160;&#160;getInt(), getString()</li><li id="Q_15_2"><button class="FuncButton" id="Q_15_2_Btn" onclick="CheckMCAnswer(15,2,this)">?</button>&#160;&#160;getFieldValue()</li></ol></li>
+<li class="QuizQuestion" id="Q_16" style="display: none;"><div class="QuestionText">17. Actualizarile programatice sunt:</div><ol class="MCAnswers"><li id="Q_16_0"><button class="FuncButton" id="Q_16_0_Btn" onclick="CheckMCAnswer(16,0,this)">?</button>&#160;&#160;actualizari aplicate direct REsultSet-ului care sunt automat efectuate si asupra bazei de date</li><li id="Q_16_1"><button class="FuncButton" id="Q_16_1_Btn" onclick="CheckMCAnswer(16,1,this)">?</button>&#160;&#160;actualizari ale metodelor vechi din Java la cele noi</li><li id="Q_16_2"><button class="FuncButton" id="Q_16_2_Btn" onclick="CheckMCAnswer(16,2,this)">?</button>&#160;&#160;actualizari ale pachetelor vechi din Java la cele noi</li></ol></li>
+<li class="QuizQuestion" id="Q_17" style="display: none;"><div class="QuestionText">18. Care este tipul de date Java care corespunde tipului de date varchar din MySql:</div><ol class="MCAnswers"><li id="Q_17_0"><button class="FuncButton" id="Q_17_0_Btn" onclick="CheckMCAnswer(17,0,this)">?</button>&#160;&#160;string</li><li id="Q_17_1"><button class="FuncButton" id="Q_17_1_Btn" onclick="CheckMCAnswer(17,1,this)">?</button>&#160;&#160;char</li><li id="Q_17_2"><button class="FuncButton" id="Q_17_2_Btn" onclick="CheckMCAnswer(17,2,this)">?</button>&#160;&#160;int</li></ol></li>
+<li class="QuizQuestion" id="Q_18" style="display: none;"><div class="QuestionText">19. Colectiile de obiecte:</div><ol class="MCAnswers"><li id="Q_18_0"><button class="FuncButton" id="Q_18_0_Btn" onclick="CheckMCAnswer(18,0,this)">?</button>&#160;&#160;reduc efortul de programare si cresc gradul de reutilizare al codului</li><li id="Q_18_1"><button class="FuncButton" id="Q_18_1_Btn" onclick="CheckMCAnswer(18,1,this)">?</button>&#160;&#160;complica procesul de programare dar cresc gradul de reutilizare al codului</li><li id="Q_18_2"><button class="FuncButton" id="Q_18_2_Btn" onclick="CheckMCAnswer(18,2,this)">?</button>&#160;&#160;complifica procesul de programare dar scad gradul de reutilizare al codului</li></ol></li>
+<li class="QuizQuestion" id="Q_19" style="display: none;"><div class="QuestionText">20. Un ArrayList este:</div><ol class="MCAnswers"><li id="Q_19_0"><button class="FuncButton" id="Q_19_0_Btn" onclick="CheckMCAnswer(19,0,this)">?</button>&#160;&#160;o interfata care este implementata prin clasa List</li><li id="Q_19_1"><button class="FuncButton" id="Q_19_1_Btn" onclick="CheckMCAnswer(19,1,this)">?</button>&#160;&#160;o clasa care implementeaza interfata List printr-un vector care isi ajusteaza dimensiunea</li><li id="Q_19_2"><button class="FuncButton" id="Q_19_2_Btn" onclick="CheckMCAnswer(19,2,this)">?</button>&#160;&#160;un vector de lungime fixa</li></ol></li>
+<li class="QuizQuestion" id="Q_20" style="display: none;"><div class="QuestionText">21. the Collections Frameworks contine:</div><ol class="MCAnswers"><li id="Q_20_0"><button class="FuncButton" id="Q_20_0_Btn" onclick="CheckMCAnswer(20,0,this)">?</button>&#160;&#160;interfete de colectii, implementari ale acestor interfete si algoritmi pentru a le manipula</li><li id="Q_20_1"><button class="FuncButton" id="Q_20_1_Btn" onclick="CheckMCAnswer(20,1,this)">?</button>&#160;&#160;doar interfete de colectii</li><li id="Q_20_2"><button class="FuncButton" id="Q_20_2_Btn" onclick="CheckMCAnswer(20,2,this)">?</button>&#160;&#160;doar implementari ale obiectelor</li></ol></li>
+<li class="QuizQuestion" id="Q_21" style="display: none;"><div class="QuestionText">22. Un LinkedList este o</div><ol class="MCAnswers"><li id="Q_21_0"><button class="FuncButton" id="Q_21_0_Btn" onclick="CheckMCAnswer(21,0,this)">?</button>&#160;&#160;implementare a interfetei List cu lisa dublu inlantuita</li><li id="Q_21_1"><button class="FuncButton" id="Q_21_1_Btn" onclick="CheckMCAnswer(21,1,this)">?</button>&#160;&#160;implementare a interfetei List cu ajutorul unui tabel de dispersie</li><li id="Q_21_2"><button class="FuncButton" id="Q_21_2_Btn" onclick="CheckMCAnswer(21,2,this)">?</button>&#160;&#160;implementarea interfetei list printr-un arbore rosu-negru</li></ol></li>
+<li class="QuizQuestion" id="Q_22" style="display: none;"><div class="QuestionText">23. Interfata Set care extinde interfata Collection</div><ol class="MCAnswers"><li id="Q_22_0"><button class="FuncButton" id="Q_22_0_Btn" onclick="CheckMCAnswer(22,0,this)">?</button>&#160;&#160;nu permite elemente duplicat si este ordonata</li><li id="Q_22_1"><button class="FuncButton" id="Q_22_1_Btn" onclick="CheckMCAnswer(22,1,this)">?</button>&#160;&#160;nu permite elemente duplicat si poate sa fie sau nu ordonata</li><li id="Q_22_2"><button class="FuncButton" id="Q_22_2_Btn" onclick="CheckMCAnswer(22,2,this)">?</button>&#160;&#160;permite lemente duplicat si nu e ordonata</li></ol></li>
+<li class="QuizQuestion" id="Q_23" style="display: none;"><div class="QuestionText">24. Intr-un TreeSet:</div><ol class="MCAnswers"><li id="Q_23_0"><button class="FuncButton" id="Q_23_0_Btn" onclick="CheckMCAnswer(23,0,this)">?</button>&#160;&#160;elementele sunt ordonate pe baza valorii lor</li><li id="Q_23_1"><button class="FuncButton" id="Q_23_1_Btn" onclick="CheckMCAnswer(23,1,this)">?</button>&#160;&#160;elementele nu sunt ordonate</li><li id="Q_23_2"><button class="FuncButton" id="Q_23_2_Btn" onclick="CheckMCAnswer(23,2,this)">?</button>&#160;&#160;doar o pare din elemente sunt ordonate</li></ol></li>
+<li class="QuizQuestion" id="Q_24" style="display: none;"><div class="QuestionText">25. Ce este XML?</div><ol class="MCAnswers"><li id="Q_24_0"><button class="FuncButton" id="Q_24_0_Btn" onclick="CheckMCAnswer(24,0,this)">?</button>&#160;&#160;un set de reguli pentru structurarea datelor in fisiere binare</li><li id="Q_24_1"><button class="FuncButton" id="Q_24_1_Btn" onclick="CheckMCAnswer(24,1,this)">?</button>&#160;&#160;un set de reguli pentru structurarea datelor in baze de date</li><li id="Q_24_2"><button class="FuncButton" id="Q_24_2_Btn" onclick="CheckMCAnswer(24,2,this)">?</button>&#160;&#160;un set de reguli, specificatii si conventii pentru structurarea datelor in fisiere text</li></ol></li>
+<li class="QuizQuestion" id="Q_25" style="display: none;"><div class="QuestionText">26. XML este abrevierea de la:</div><ol class="MCAnswers"><li id="Q_25_0"><button class="FuncButton" id="Q_25_0_Btn" onclick="CheckMCAnswer(25,0,this)">?</button>&#160;&#160;extensible markup language</li><li id="Q_25_1"><button class="FuncButton" id="Q_25_1_Btn" onclick="CheckMCAnswer(25,1,this)">?</button>&#160;&#160;xanax markup language</li><li id="Q_25_2"><button class="FuncButton" id="Q_25_2_Btn" onclick="CheckMCAnswer(25,2,this)">?</button>&#160;&#160;xerox markup language</li></ol></li>
+<li class="QuizQuestion" id="Q_26" style="display: none;"><div class="QuestionText">27. Incercuiti afirmatia corecta cu privire la JSP:</div><ol class="MCAnswers"><li id="Q_26_0"><button class="FuncButton" id="Q_26_0_Btn" onclick="CheckMCAnswer(26,0,this)">?</button>&#160;&#160;fisierele cu extensia.jsp nu pot contine decat cod &#x2026;</li><li id="Q_26_1"><button class="FuncButton" id="Q_26_1_Btn" onclick="CheckMCAnswer(26,1,this)">?</button>&#160;&#160;jsp-urile nu separa continutul static de cel dinamin</li><li id="Q_26_2"><button class="FuncButton" id="Q_26_2_Btn" onclick="CheckMCAnswer(26,2,this)">?</button>&#160;&#160;extinde limbajul HTML, oferind posibilitatea integrarii de secvente de cod Java prin intermediul unor tag-uri speciale</li></ol></li>
+<li class="QuizQuestion" id="Q_27" style="display: none;"><div class="QuestionText">28. JSP-urile(Java Server Progress)</div><ol class="MCAnswers"><li id="Q_27_0"><button class="FuncButton" id="Q_27_0_Btn" onclick="CheckMCAnswer(27,0,this)">?</button>&#160;&#160;arata ca niste fisiere HTML si pot sa genereze doar continut dinamic</li><li id="Q_27_1"><button class="FuncButton" id="Q_27_1_Btn" onclick="CheckMCAnswer(27,1,this)">?</button>&#160;&#160;arata ca niste fisiere HTML si pot sa genereze doar continut static</li><li id="Q_27_2"><button class="FuncButton" id="Q_27_2_Btn" onclick="CheckMCAnswer(27,2,this)">?</button>&#160;&#160;nu seamana deloc cu fisierele HTML ci mai degraba cu o aplicatie Java obisnuita</li></ol></li>
+<li class="QuizQuestion" id="Q_28" style="display: none;"><div class="QuestionText">29. XML utlizeaza:</div><ol class="MCAnswers"><li id="Q_28_0"><button class="FuncButton" id="Q_28_0_Btn" onclick="CheckMCAnswer(28,0,this)">?</button>&#160;&#160;taguri, atribute si text</li><li id="Q_28_1"><button class="FuncButton" id="Q_28_1_Btn" onclick="CheckMCAnswer(28,1,this)">?</button>&#160;&#160;variabile de atribute si text</li><li id="Q_28_2"><button class="FuncButton" id="Q_28_2_Btn" onclick="CheckMCAnswer(28,2,this)">?</button>&#160;&#160;variabile, atribute si text</li></ol></li>
+<li class="QuizQuestion" id="Q_29" style="display: none;"><div class="QuestionText">30. SAX permite procesarea documentelor XML:</div><ol class="MCAnswers"><li id="Q_29_0"><button class="FuncButton" id="Q_29_0_Btn" onclick="CheckMCAnswer(29,0,this)">?</button>&#160;&#160;prin intermediul unor evenimente</li><li id="Q_29_1"><button class="FuncButton" id="Q_29_1_Btn" onclick="CheckMCAnswer(29,1,this)">?</button>&#160;&#160;?</li><li id="Q_29_2"><button class="FuncButton" id="Q_29_2_Btn" onclick="CheckMCAnswer(29,2,this)">?</button>&#160;&#160;?</li></ol></li>
+<li class="QuizQuestion" id="Q_30" style="display: none;"><div class="QuestionText">31. interfata Map:</div><ol class="MCAnswers"><li id="Q_30_0"><button class="FuncButton" id="Q_30_0_Btn" onclick="CheckMCAnswer(30,0,this)">?</button>&#160;&#160;pune in corespondenta cheile catre anumite valori</li><li id="Q_30_1"><button class="FuncButton" id="Q_30_1_Btn" onclick="CheckMCAnswer(30,1,this)">?</button>&#160;&#160;creeaza o harta grafica</li><li id="Q_30_2"><button class="FuncButton" id="Q_30_2_Btn" onclick="CheckMCAnswer(30,2,this)">?</button>&#160;&#160;creeaza o harta rutiera</li></ol></li>
+<li class="QuizQuestion" id="Q_31" style="display: none;"><div class="QuestionText">32. Se considera un obiect de tip Vector in care au fost adaugate 4 elemente. Cat este capacitatea vectorului:</div><ol class="MCAnswers"><li id="Q_31_0"><button class="FuncButton" id="Q_31_0_Btn" onclick="CheckMCAnswer(31,0,this)">?</button>&#160;&#160;4</li><li id="Q_31_1"><button class="FuncButton" id="Q_31_1_Btn" onclick="CheckMCAnswer(31,1,this)">?</button>&#160;&#160;10</li><li id="Q_31_2"><button class="FuncButton" id="Q_31_2_Btn" onclick="CheckMCAnswer(31,2,this)">?</button>&#160;&#160;1</li></ol></li>
+<li class="QuizQuestion" id="Q_32" style="display: none;"><div class="QuestionText">33. Ce este un servlet?</div><ol class="MCAnswers"><li id="Q_32_0"><button class="FuncButton" id="Q_32_0_Btn" onclick="CheckMCAnswer(32,0,this)">?</button>&#160;&#160;o aplicatie desktop</li><li id="Q_32_1"><button class="FuncButton" id="Q_32_1_Btn" onclick="CheckMCAnswer(32,1,this)">?</button>&#160;&#160;o aplicatie cu baze de date</li><li id="Q_32_2"><button class="FuncButton" id="Q_32_2_Btn" onclick="CheckMCAnswer(32,2,this)">?</button>&#160;&#160;o componenta software pe parte de server, scrisa in Java si care extinde functionalitatea unui server (de obicei HTTP)</li></ol></li>
+<li class="QuizQuestion" id="Q_33" style="display: none;"><div class="QuestionText">34. Cand un browser trimite o cerere catre server...</div><ol class="MCAnswers"><li id="Q_33_0"><button class="FuncButton" id="Q_33_0_Btn" onclick="CheckMCAnswer(33,0,this)">?</button>&#160;&#160;serverul o trimite mai departe unui servlet. Servlet-ul proceseaza cererea si construieste un raspuns (in HTML) care este returnat clientului</li><li id="Q_33_1"><button class="FuncButton" id="Q_33_1_Btn" onclick="CheckMCAnswer(33,1,this)">?</button>&#160;&#160;servletul o trimite mai departe unui administrator</li><li id="Q_33_2"><button class="FuncButton" id="Q_33_2_Btn" onclick="CheckMCAnswer(33,2,this)">?</button>&#160;&#160;serverul o pune intr-o lista de asteptare pe care administratorul o va solutiona</li></ol></li>
+<li class="QuizQuestion" id="Q_34" style="display: none;"><div class="QuestionText">35. Cum se poate defini un servlet?</div><ol class="MCAnswers"><li id="Q_34_0"><button class="FuncButton" id="Q_34_0_Btn" onclick="CheckMCAnswer(34,0,this)">?</button>&#160;&#160;prin implementarea interfetei ApacheServlet</li><li id="Q_34_1"><button class="FuncButton" id="Q_34_1_Btn" onclick="CheckMCAnswer(34,1,this)">?</button>&#160;&#160;se creeaza o metoda de tip Servlet</li><li id="Q_34_2"><button class="FuncButton" id="Q_34_2_Btn" onclick="CheckMCAnswer(34,2,this)">?</button>&#160;&#160;prin extinderea clasei httpServlet</li></ol></li>
+<li class="QuizQuestion" id="Q_35" style="display: none;"><div class="QuestionText">36. Servleturile utilizeaza metoda service() care:</div><ol class="MCAnswers"><li id="Q_35_0"><button class="FuncButton" id="Q_35_0_Btn" onclick="CheckMCAnswer(35,0,this)">?</button>&#160;&#160;este apelata automat ca raspuns la cererea fiecarui client</li><li id="Q_35_1"><button class="FuncButton" id="Q_35_1_Btn" onclick="CheckMCAnswer(35,1,this)">?</button>&#160;&#160;se apeleaza doar cand porneste servletul</li><li id="Q_35_2"><button class="FuncButton" id="Q_35_2_Btn" onclick="CheckMCAnswer(35,2,this)">?</button>&#160;&#160;se apeleaza doar dupa ce servletul este incarcat</li></ol></li>
+<li class="QuizQuestion" id="Q_36" style="display: none;"><div class="QuestionText">37. Ce se intelege prin supraincarcare?</div><ol class="MCAnswers"><li id="Q_36_0"><button class="FuncButton" id="Q_36_0_Btn" onclick="CheckMCAnswer(36,0,this)">?</button>&#160;&#160;mai multe metode pot avea acelasi nume dar o signatura diferita</li><li id="Q_36_1"><button class="FuncButton" id="Q_36_1_Btn" onclick="CheckMCAnswer(36,1,this)">?</button>&#160;&#160;mai multe metode pot avea acelasi nume si aceeasi signatura</li><li id="Q_36_2"><button class="FuncButton" id="Q_36_2_Btn" onclick="CheckMCAnswer(36,2,this)">?</button>&#160;&#160;o metoda careia i se trnsmit la apel mai multi parametrii decat aceasta are</li></ol></li>
+<li class="QuizQuestion" id="Q_37" style="display: none;"><div class="QuestionText">38. Cum este afirmatia &#x201C;La apelul unei functii anumiti parametrii pot fi omisi&#x201D;:</div><ol class="MCAnswers"><li id="Q_37_0"><button class="FuncButton" id="Q_37_0_Btn" onclick="CheckMCAnswer(37,0,this)">?</button>&#160;&#160;adevarata</li><li id="Q_37_1"><button class="FuncButton" id="Q_37_1_Btn" onclick="CheckMCAnswer(37,1,this)">?</button>&#160;&#160;falsa</li></ol></li>
+<li class="QuizQuestion" id="Q_38" style="display: none;"><div class="QuestionText">39. Ce face comanda super()?</div><ol class="MCAnswers"><li id="Q_38_0"><button class="FuncButton" id="Q_38_0_Btn" onclick="CheckMCAnswer(38,0,this)">?</button>&#160;&#160;creeaza un obiect al superclasei</li><li id="Q_38_1"><button class="FuncButton" id="Q_38_1_Btn" onclick="CheckMCAnswer(38,1,this)">?</button>&#160;&#160;apeleaza metoda oarecare numita super()</li><li id="Q_38_2"><button class="FuncButton" id="Q_38_2_Btn" onclick="CheckMCAnswer(38,2,this)">?</button>&#160;&#160;apeleaza constructorul fara parametrii a clasei de baza</li></ol></li>
+<li class="QuizQuestion" id="Q_39" style="display: none;"><div class="QuestionText">40. Se considera o clasa care contine o variabila membru statica. Pentru variabila membru statica:</div><ol class="MCAnswers"><li id="Q_39_0"><button class="FuncButton" id="Q_39_0_Btn" onclick="CheckMCAnswer(39,0,this)">?</button>&#160;&#160;se aloca memorie o singura data indiferent de nuamru de obiecte de acel tip</li><li id="Q_39_1"><button class="FuncButton" id="Q_39_1_Btn" onclick="CheckMCAnswer(39,1,this)">?</button>&#160;&#160;se aloca memorie direct proportional de numarul de obiecte de acel tip</li><li id="Q_39_2"><button class="FuncButton" id="Q_39_2_Btn" onclick="CheckMCAnswer(39,2,this)">?</button>&#160;&#160;se aloca o zona de memorie de 30 de octeti pentru fiecare variabila statica</li></ol></li>
+<li class="QuizQuestion" id="Q_40" style="display: none;"><div class="QuestionText">41. Cum poate fi convertit un String intr-un intreg</div><ol class="MCAnswers"><li id="Q_40_0"><button class="FuncButton" id="Q_40_0_Btn" onclick="CheckMCAnswer(40,0,this)">?</button>&#160;&#160;int x= Integer.parseInt(&#x201C;123&#x201D;);</li><li id="Q_40_1"><button class="FuncButton" id="Q_40_1_Btn" onclick="CheckMCAnswer(40,1,this)">?</button>&#160;&#160;Integer x2 = Integer.valueOf(&#x201C;123&#x201D;);</li><li id="Q_40_2"><button class="FuncButton" id="Q_40_2_Btn" onclick="CheckMCAnswer(40,2,this)">?</button>&#160;&#160;?</li></ol></li>
+<li class="QuizQuestion" id="Q_41" style="display: none;"><div class="QuestionText">42. Potrivit principiului incapsularii:</div><ol class="MCAnswers"><li id="Q_41_0"><button class="FuncButton" id="Q_41_0_Btn" onclick="CheckMCAnswer(41,0,this)">?</button>&#160;&#160;accesul la variabilele membre ale unui obiect se poate realiza doar cu ajutorul metodelor obiectului</li><li id="Q_41_1"><button class="FuncButton" id="Q_41_1_Btn" onclick="CheckMCAnswer(41,1,this)">?</button>&#160;&#160;accesul la metodele obiectului se poate realiza doar cu ajutorul variabileleor membre</li><li id="Q_41_2"><button class="FuncButton" id="Q_41_2_Btn" onclick="CheckMCAnswer(41,2,this)">?</button>&#160;&#160;accesul la variabilele membre se poate realiza doar din constructor</li></ol></li>
+<li class="QuizQuestion" id="Q_42" style="display: none;"><div class="QuestionText">43. Care este clasa aflata la radacina ierarhiei de clasa in Java:</div><ol class="MCAnswers"><li id="Q_42_0"><button class="FuncButton" id="Q_42_0_Btn" onclick="CheckMCAnswer(42,0,this)">?</button>&#160;&#160;Root</li><li id="Q_42_1"><button class="FuncButton" id="Q_42_1_Btn" onclick="CheckMCAnswer(42,1,this)">?</button>&#160;&#160;Object</li><li id="Q_42_2"><button class="FuncButton" id="Q_42_2_Btn" onclick="CheckMCAnswer(42,2,this)">?</button>&#160;&#160;Root...</li></ol></li>
+<li class="QuizQuestion" id="Q_43" style="display: none;"><div class="QuestionText">44. Precizati care va fi caracterul afisat &#x2026;.:<br />String s=&#x201D;abcd&#x201D;;<br />system.out.println(s[1]);</div><ol class="MCAnswers"><li id="Q_43_0"><button class="FuncButton" id="Q_43_0_Btn" onclick="CheckMCAnswer(43,0,this)">?</button>&#160;&#160;va afisa litera b</li><li id="Q_43_1"><button class="FuncButton" id="Q_43_1_Btn" onclick="CheckMCAnswer(43,1,this)">?</button>&#160;&#160;va afisa litera a</li><li id="Q_43_2"><button class="FuncButton" id="Q_43_2_Btn" onclick="CheckMCAnswer(43,2,this)">?</button>&#160;&#160;va genera eroare</li></ol></li>
+<li class="QuizQuestion" id="Q_44" style="display: none;"><div class="QuestionText">45. Ce va afisa urmatoarea secventa:<br />String nr1=&#x201D;3&#x201D;;<br />String nr2=&#x201D;3&#x201D;;<br />System.out.println(nr1+nr2);</div><ol class="MCAnswers"><li id="Q_44_0"><button class="FuncButton" id="Q_44_0_Btn" onclick="CheckMCAnswer(44,0,this)">?</button>&#160;&#160;7</li><li id="Q_44_1"><button class="FuncButton" id="Q_44_1_Btn" onclick="CheckMCAnswer(44,1,this)">?</button>&#160;&#160;33</li><li id="Q_44_2"><button class="FuncButton" id="Q_44_2_Btn" onclick="CheckMCAnswer(44,2,this)">?</button>&#160;&#160;expresia este...</li></ol></li>
+<li class="QuizQuestion" id="Q_45" style="display: none;"><div class="QuestionText">46. ce va afisa secventa...<br />int[] v={3,2,1};<br />for(int i:v)<br />{ system.out.println(&#x201C;&#x201D;+i)}</div><ol class="MCAnswers"><li id="Q_45_0"><button class="FuncButton" id="Q_45_0_Btn" onclick="CheckMCAnswer(45,0,this)">?</button>&#160;&#160;0 1 2</li><li id="Q_45_1"><button class="FuncButton" id="Q_45_1_Btn" onclick="CheckMCAnswer(45,1,this)">?</button>&#160;&#160;1 2 3</li><li id="Q_45_2"><button class="FuncButton" id="Q_45_2_Btn" onclick="CheckMCAnswer(45,2,this)">?</button>&#160;&#160;3 2 1</li></ol></li>
+<li class="QuizQuestion" id="Q_46" style="display: none;"><div class="QuestionText">47. In situatia in care dorim sa scriem un program care sa determine cand cursorul mouseului ajunge deasupra unui JPanel, cand paraseste suprafata JPanel-ului si cand se face click pe JPanel trebuie sa:</div><ol class="MCAnswers"><li id="Q_46_0"><button class="FuncButton" id="Q_46_0_Btn" onclick="CheckMCAnswer(46,0,this)">?</button>&#160;&#160;implementam interfata MouseListener</li><li id="Q_46_1"><button class="FuncButton" id="Q_46_1_Btn" onclick="CheckMCAnswer(46,1,this)">?</button>&#160;&#160;implementam intefetele mouse over, mouseout si mouseclick</li><li id="Q_46_2"><button class="FuncButton" id="Q_46_2_Btn" onclick="CheckMCAnswer(46,2,this)">?</button>&#160;&#160;implementam interfata mousestaff</li></ol></li>
+<li class="QuizQuestion" id="Q_47" style="display: none;"><div class="QuestionText">48. pentru a crea un eveniment pentru o componenta:</div><ol class="MCAnswers"><li id="Q_47_0"><button class="FuncButton" id="Q_47_0_Btn" onclick="CheckMCAnswer(47,0,this)">?</button>&#160;&#160;se selecteaza in Eclipse componenta si se alege din interfata evenimentul dorit pe care il vom edita</li><li id="Q_47_1"><button class="FuncButton" id="Q_47_1_Btn" onclick="CheckMCAnswer(47,1,this)">?</button>&#160;&#160;se face dublu click in eclipse pe componenta si se deschide rutina de tratare a evenimentului pe care o vom edita</li><li id="Q_47_2"><button class="FuncButton" id="Q_47_2_Btn" onclick="CheckMCAnswer(47,2,this)">?</button>&#160;&#160;trebuie creata o clasa care implementeaza interfata ce contine metodele de interes si o instanta a clasei respective se transmite ca parametru metodei addXXxListener a componentei</li></ol></li>
+<li class="QuizQuestion" id="Q_48" style="display: none;"><div class="QuestionText">54. imaginea de mai jos contien o componenta de tip:<br /><img src="https://static.javatpoint.com/java/swing/images/java-jtabbedpane1.png" alt="???" title="???" width="???" height="???"/></div><ol class="MCAnswers"><li id="Q_48_0"><button class="FuncButton" id="Q_48_0_Btn" onclick="CheckMCAnswer(48,0,this)">?</button>&#160;&#160;JMenu</li><li id="Q_48_1"><button class="FuncButton" id="Q_48_1_Btn" onclick="CheckMCAnswer(48,1,this)">?</button>&#160;&#160;JTabbedPane</li><li id="Q_48_2"><button class="FuncButton" id="Q_48_2_Btn" onclick="CheckMCAnswer(48,2,this)">?</button>&#160;&#160;JForm</li></ol></li>
+<li class="QuizQuestion" id="Q_49" style="display: none;"><div class="QuestionText">55. Scrieti liniile de cod pentru crearea unui control JList care contine lunile anului</div><ol class="MCAnswers"><li id="Q_49_0"><button class="FuncButton" id="Q_49_0_Btn" onclick="CheckMCAnswer(49,0,this)">?</button>&#160;&#160;String[] items = {&#x201C;jan&#x201D;,&#x201D;feb&#x201D;,&#x201D;mar&#x2026;.}<br />JList lst = new Jlist(items);<br />getContentPane().add(lst);</li></ol></li>
+<li class="QuizQuestion" id="Q_50" style="display: none;"><div class="QuestionText">56. JDBC este o tehnologie care:</div><ol class="MCAnswers"><li id="Q_50_0"><button class="FuncButton" id="Q_50_0_Btn" onclick="CheckMCAnswer(50,0,this)">?</button>&#160;&#160;permite realizarea de aplicatii Java cu interfata...</li><li id="Q_50_1"><button class="FuncButton" id="Q_50_1_Btn" onclick="CheckMCAnswer(50,1,this)">?</button>&#160;&#160;?</li><li id="Q_50_2"><button class="FuncButton" id="Q_50_2_Btn" onclick="CheckMCAnswer(50,2,this)">?</button>&#160;&#160;Permite conectarea la baza de date si ofera metode pentru interogarea si actualizarea acestora</li></ol></li>
+<li class="QuizQuestion" id="Q_51" style="display: none;"><div class="QuestionText">57. Mentionati comenzile SQL cu ajutorul carora se pot prelua date din bazele de date, se pot adauga date in bazele de date, respectiv se pot modifica date existente, se pot sterge date ( Doar se vor mentiona). </div><ol class="MCAnswers"><li id="Q_51_0"><button class="FuncButton" id="Q_51_0_Btn" onclick="CheckMCAnswer(51,0,this)">?</button>&#160;&#160;select, insert into, update, delete</li></ol></li>
+<li class="QuizQuestion" id="Q_52" style="display: none;"><div class="QuestionText">57. Care este rolul cuvantului cheie synchronized?</div><ol class="MCAnswers"><li id="Q_52_0"><button class="FuncButton" id="Q_52_0_Btn" onclick="CheckMCAnswer(52,0,this)">?</button>&#160;&#160;cu ajutorul lui se pot declara secvnete de cod care se executa in regim de exclucere mutuala</li><li id="Q_52_1"><button class="FuncButton" id="Q_52_1_Btn" onclick="CheckMCAnswer(52,1,this)">?</button>&#160;&#160;cu ajutorul lui se pot declara fire de executie</li><li id="Q_52_2"><button class="FuncButton" id="Q_52_2_Btn" onclick="CheckMCAnswer(52,2,this)">?</button>&#160;&#160;cu ajutorul lui s epot realiza schimburi de informatii in retea</li></ol></li>
+<li class="QuizQuestion" id="Q_53" style="display: none;"><div class="QuestionText">58. ce prioritate are un fir de executie?</div><ol class="MCAnswers"><li id="Q_53_0"><button class="FuncButton" id="Q_53_0_Btn" onclick="CheckMCAnswer(53,0,this)">?</button>&#160;&#160;egala cu cea a firului de executie care l-a creat</li><li id="Q_53_1"><button class="FuncButton" id="Q_53_1_Btn" onclick="CheckMCAnswer(53,1,this)">?</button>&#160;&#160;mai mica decat cea a firului de executie care l-a creat</li><li id="Q_53_2"><button class="FuncButton" id="Q_53_2_Btn" onclick="CheckMCAnswer(53,2,this)">?</button>&#160;&#160;mai mare decat cea a firului de executie care l-a creat</li></ol></li>
+<li class="QuizQuestion" id="Q_54" style="display: none;"><div class="QuestionText">59. Biblioteca Swing ofera clase pentru:</div><ol class="MCAnswers"><li id="Q_54_0"><button class="FuncButton" id="Q_54_0_Btn" onclick="CheckMCAnswer(54,0,this)">?</button>&#160;&#160;crearea aplicatiilor cu interfata grafica</li><li id="Q_54_1"><button class="FuncButton" id="Q_54_1_Btn" onclick="CheckMCAnswer(54,1,this)">?</button>&#160;&#160;tratarea exceptiilor</li><li id="Q_54_2"><button class="FuncButton" id="Q_54_2_Btn" onclick="CheckMCAnswer(54,2,this)">?</button>&#160;&#160;lucru cu baze de date</li></ol></li>
+<li class="QuizQuestion" id="Q_55" style="display: none;"><div class="QuestionText">60. cum se poate crea o fereastra in java?</div><ol class="MCAnswers"><li id="Q_55_0"><button class="FuncButton" id="Q_55_0_Btn" onclick="CheckMCAnswer(55,0,this)">?</button>&#160;&#160;cu ajutorul clasei Form</li><li id="Q_55_1"><button class="FuncButton" id="Q_55_1_Btn" onclick="CheckMCAnswer(55,1,this)">?</button>&#160;&#160;cu ajutorul clasei JavaWindow</li><li id="Q_55_2"><button class="FuncButton" id="Q_55_2_Btn" onclick="CheckMCAnswer(55,2,this)">?</button>&#160;&#160;cu ajutorul unei clase care extinde JFrame</li></ol></li>
+<li class="QuizQuestion" id="Q_56" style="display: none;"><div class="QuestionText">61. metoda setBounds() permite:</div><ol class="MCAnswers"><li id="Q_56_0"><button class="FuncButton" id="Q_56_0_Btn" onclick="CheckMCAnswer(56,0,this)">?</button>&#160;&#160;stabilirea stilului, grosimii si formei pentru marginile unei componente</li><li id="Q_56_1"><button class="FuncButton" id="Q_56_1_Btn" onclick="CheckMCAnswer(56,1,this)">?</button>&#160;&#160;stabilirea doar a dimensiunii unei componenta</li><li id="Q_56_2"><button class="FuncButton" id="Q_56_2_Btn" onclick="CheckMCAnswer(56,2,this)">?</button>&#160;&#160;amplasarea componentei asupra careia se aplica intr-o anumita pozitie si stabilirea dimensiunii acelei componente</li></ol></li>
+<li class="QuizQuestion" id="Q_57" style="display: none;"><div class="QuestionText">62. metoda setToolTipText() permite:</div><ol class="MCAnswers"><li id="Q_57_0"><button class="FuncButton" id="Q_57_0_Btn" onclick="CheckMCAnswer(57,0,this)">?</button>&#160;&#160;setarea continutului unei casete de text</li><li id="Q_57_1"><button class="FuncButton" id="Q_57_1_Btn" onclick="CheckMCAnswer(57,1,this)">?</button>&#160;&#160;setarea textului unui control JLabel</li><li id="Q_57_2"><button class="FuncButton" id="Q_57_2_Btn" onclick="CheckMCAnswer(57,2,this)">?</button>&#160;&#160;specificarea unui text care se va ivi atunci cand cursorul mouseului sta deasupra unei componente</li></ol></li>
+<li class="QuizQuestion" id="Q_58" style="display: none;"><div class="QuestionText">63. afisarea unui mesaj in java se poate face:</div><ol class="MCAnswers"><li id="Q_58_0"><button class="FuncButton" id="Q_58_0_Btn" onclick="CheckMCAnswer(58,0,this)">?</button>&#160;&#160;MessageBox.Show(&#x201C;Mesaj&#x201D;)</li><li id="Q_58_1"><button class="FuncButton" id="Q_58_1_Btn" onclick="CheckMCAnswer(58,1,this)">?</button>&#160;&#160;...(&#x201C;Mesaj&#x201D;)</li><li id="Q_58_2"><button class="FuncButton" id="Q_58_2_Btn" onclick="CheckMCAnswer(58,2,this)">?</button>&#160;&#160;JOptionPane.showMessageDialog(null, &#x201C;Mesaj&#x201D;)</li></ol></li>
+<li class="QuizQuestion" id="Q_59" style="display: none;"><div class="QuestionText">64. unde trebuie scris codul care vrem sa se execute atunci cand se face click pe un JButton</div><ol class="MCAnswers"><li id="Q_59_0"><button class="FuncButton" id="Q_59_0_Btn" onclick="CheckMCAnswer(59,0,this)">?</button>&#160;&#160;in evenimentul JButton_CLick</li><li id="Q_59_1"><button class="FuncButton" id="Q_59_1_Btn" onclick="CheckMCAnswer(59,1,this)">?</button>&#160;&#160;in metoda ActionPerformed a unei clase ce implementeaza interfata ActionListener</li><li id="Q_59_2"><button class="FuncButton" id="Q_59_2_Btn" onclick="CheckMCAnswer(59,2,this)">?</button>&#160;&#160;in metoda...</li></ol></li>
+<li class="QuizQuestion" id="Q_60" style="display: none;"><div class="QuestionText">65. O clasa care implementeaza o interfata:</div><ol class="MCAnswers"><li id="Q_60_0"><button class="FuncButton" id="Q_60_0_Btn" onclick="CheckMCAnswer(60,0,this)">?</button>&#160;&#160;trebuie sa specifice codul corespunzator metodelor din interfata dar poate sa declare variabile si metode care nu apar in interfata</li><li id="Q_60_1"><button class="FuncButton" id="Q_60_1_Btn" onclick="CheckMCAnswer(60,1,this)">?</button>&#160;&#160;trebuie sa specifice codul corespunzator metodelor din interfata dar nu poate sa eclare variabile si metode care nu apar in interfata</li><li id="Q_60_2"><button class="FuncButton" id="Q_60_2_Btn" onclick="CheckMCAnswer(60,2,this)">?</button>&#160;&#160;nu trebuie sa specifice codul corespunzator metodelor din interfata</li></ol></li>
+<li class="QuizQuestion" id="Q_61" style="display: none;"><div class="QuestionText">67. o clasa poate implementa un numar de interfete egal cu:</div><ol class="MCAnswers"><li id="Q_61_0"><button class="FuncButton" id="Q_61_0_Btn" onclick="CheckMCAnswer(61,0,this)">?</button>&#160;&#160;1</li><li id="Q_61_1"><button class="FuncButton" id="Q_61_1_Btn" onclick="CheckMCAnswer(61,1,this)">?</button>&#160;&#160;&gt;=1</li><li id="Q_61_2"><button class="FuncButton" id="Q_61_2_Btn" onclick="CheckMCAnswer(61,2,this)">?</button>&#160;&#160;0</li></ol></li>
+<li class="QuizQuestion" id="Q_62" style="display: none;"><div class="QuestionText">68. implementarea unei interfete poate fi:</div><ol class="MCAnswers"><li id="Q_62_0"><button class="FuncButton" id="Q_62_0_Btn" onclick="CheckMCAnswer(62,0,this)">?</button>&#160;&#160;doar o clasa</li><li id="Q_62_1"><button class="FuncButton" id="Q_62_1_Btn" onclick="CheckMCAnswer(62,1,this)">?</button>&#160;&#160;o clasa sau o clasa abstracta</li><li id="Q_62_2"><button class="FuncButton" id="Q_62_2_Btn" onclick="CheckMCAnswer(62,2,this)">?</button>&#160;&#160;o alta interfata</li></ol></li>
+<li class="QuizQuestion" id="Q_63" style="display: none;"><div class="QuestionText">69. ce este o exceptie?</div><ol class="MCAnswers"><li id="Q_63_0"><button class="FuncButton" id="Q_63_0_Btn" onclick="CheckMCAnswer(63,0,this)">?</button>&#160;&#160;o exceptie este un eveniment care nu permiote continuarea normala a executiei propgramului</li><li id="Q_63_1"><button class="FuncButton" id="Q_63_1_Btn" onclick="CheckMCAnswer(63,1,this)">?</button>&#160;&#160;o variabila care are o valoare exceptional de mare</li><li id="Q_63_2"><button class="FuncButton" id="Q_63_2_Btn" onclick="CheckMCAnswer(63,2,this)">?</button>&#160;&#160;o functie care returneaza o valoare neobisnuita</li></ol></li>
+<li class="QuizQuestion" id="Q_64" style="display: none;"><div class="QuestionText">71. care sunt constructiile de baza pentru lucrul cu exceptii?</div><ol class="MCAnswers"><li id="Q_64_0"><button class="FuncButton" id="Q_64_0_Btn" onclick="CheckMCAnswer(64,0,this)">?</button>&#160;&#160;try, catch, finnaly, throw, throws</li><li id="Q_64_1"><button class="FuncButton" id="Q_64_1_Btn" onclick="CheckMCAnswer(64,1,this)">?</button>&#160;&#160;super exception, fatal error</li><li id="Q_64_2"><button class="FuncButton" id="Q_64_2_Btn" onclick="CheckMCAnswer(64,2,this)">?</button>&#160;&#160;fatal warning, application exit, exceptional value</li></ol></li>
+<li class="QuizQuestion" id="Q_65" style="display: none;"><div class="QuestionText">72. instructiunea throw poate fi plasata:</div><ol class="MCAnswers"><li id="Q_65_0"><button class="FuncButton" id="Q_65_0_Btn" onclick="CheckMCAnswer(65,0,this)">?</button>&#160;&#160;in interiorul oricarei metode</li><li id="Q_65_1"><button class="FuncButton" id="Q_65_1_Btn" onclick="CheckMCAnswer(65,1,this)">?</button>&#160;&#160;in exteriorul oricarei metode</li><li id="Q_65_2"><button class="FuncButton" id="Q_65_2_Btn" onclick="CheckMCAnswer(65,2,this)">?</button>&#160;&#160;in metode a caror definitie este insotita de o clauza throws in care apare tipul de exceptie respectiv</li></ol></li>
+<li class="QuizQuestion" id="Q_66" style="display: none;"><div class="QuestionText">73. blocurile try-catch:</div><ol class="MCAnswers"><li id="Q_66_0"><button class="FuncButton" id="Q_66_0_Btn" onclick="CheckMCAnswer(66,0,this)">?</button>&#160;&#160;Indica seria de instructiuni in care pot sa apara exceptiile, tipul exceptiilor si modul in care se solutioneaza acestea</li><li id="Q_66_1"><button class="FuncButton" id="Q_66_1_Btn" onclick="CheckMCAnswer(66,1,this)">?</button>&#160;&#160;indica bucati de cod care pot contine erori de sintaca</li><li id="Q_66_2"><button class="FuncButton" id="Q_66_2_Btn" onclick="CheckMCAnswer(66,2,this)">?</button>&#160;&#160;...</li></ol></li>
+<li class="QuizQuestion" id="Q_67" style="display: none;"><div class="QuestionText">73. secventa finally:</div><ol class="MCAnswers"><li id="Q_67_0"><button class="FuncButton" id="Q_67_0_Btn" onclick="CheckMCAnswer(67,0,this)">?</button>&#160;&#160;reprezinta o zona de cod care se executa inainte de a iesi din program</li><li id="Q_67_1"><button class="FuncButton" id="Q_67_1_Btn" onclick="CheckMCAnswer(67,1,this)">?</button>&#160;&#160;reprezinta o zona de cod care se executa inainte de a iesi dintr-o metoda</li><li id="Q_67_2"><button class="FuncButton" id="Q_67_2_Btn" onclick="CheckMCAnswer(67,2,this)">?</button>&#160;&#160;reprezinta un mecanism prin care se forteaza executia unei portiuni de cod indiferent daca o exceptie a aparut sau nu</li></ol></li>
+<li class="QuizQuestion" id="Q_68" style="display: none;"><div class="QuestionText">74. ce se intelege prin fire de executie?</div><ol class="MCAnswers"><li id="Q_68_0"><button class="FuncButton" id="Q_68_0_Btn" onclick="CheckMCAnswer(68,0,this)">?</button>&#160;&#160;un fir de executie reprezinta actiunile pe care un utilizator le face asupra programului de la pornirea acestuia pana la inchiderea lui</li><li id="Q_68_1"><button class="FuncButton" id="Q_68_1_Btn" onclick="CheckMCAnswer(68,1,this)">?</button>&#160;&#160;un fir de executie reprezinta o inlantuire de instructiuni care se executa una dupa alta</li><li id="Q_68_2"><button class="FuncButton" id="Q_68_2_Btn" onclick="CheckMCAnswer(68,2,this)">?</button>&#160;&#160;firele de executie reprezinta portiuni de cod ale aceluiasi program care se pot executa in paralel una fata de alta</li></ol></li>
+<li class="QuizQuestion" id="Q_69" style="display: none;"><div class="QuestionText">75. cum se poate crea un fir de executie?</div><ol class="MCAnswers"><li id="Q_69_0"><button class="FuncButton" id="Q_69_0_Btn" onclick="CheckMCAnswer(69,0,this)">?</button>&#160;&#160;fie se creaza o clasa derivata din clasa Thread si in acea clasa se redefineste metoda run() fie se implementeaza interfata Runnable</li><li id="Q_69_1"><button class="FuncButton" id="Q_69_1_Btn" onclick="CheckMCAnswer(69,1,this)">?</button>&#160;&#160;se creeaza o metoda de tip runnable</li><li id="Q_69_2"><button class="FuncButton" id="Q_69_2_Btn" onclick="CheckMCAnswer(69,2,this)">?</button>&#160;&#160;se creaza cate o metoda de tip Thread pentru fiecare fir de executie</li></ol></li>
+<li class="QuizQuestion" id="Q_70" style="display: none;"><div class="QuestionText">76. apelul metodei start() aferente unui fir de executie determina:</div><ol class="MCAnswers"><li id="Q_70_0"><button class="FuncButton" id="Q_70_0_Btn" onclick="CheckMCAnswer(70,0,this)">?</button>&#160;&#160;inceperea rualrii firului de executie</li><li id="Q_70_1"><button class="FuncButton" id="Q_70_1_Btn" onclick="CheckMCAnswer(70,1,this)">?</button>&#160;&#160;trecerea firului in starea gata de rulare</li><li id="Q_70_2"><button class="FuncButton" id="Q_70_2_Btn" onclick="CheckMCAnswer(70,2,this)">?</button>&#160;&#160;trecerea firului de executie in starea creat</li></ol></li>
+<li class="QuizQuestion" id="Q_71" style="display: none;"><div class="QuestionText">77. ce diferenta este intre blocarea unui fir de executie cu ajutorul metodei sleep(durata) respectiv cu ajutorul metodei wait(durata)</div><ol class="MCAnswers"><li id="Q_71_0"><button class="FuncButton" id="Q_71_0_Btn" onclick="CheckMCAnswer(71,0,this)">?</button>&#160;&#160;Sleep<br />	Pune Threadul curent sa &#x201C;doarma&#x201D; pentru o anumita perioada de timp.<br />Wait<br />	Pune Threadul curent sa astepte pana cand alt thread invoca metoda &#x201C; notify() &#x201C; sau &#x201C;notifyAll()&#x201D; sau trece durata</li></ol></li>
+<li class="QuizQuestion" id="Q_72" style="display: none;"><div class="QuestionText">78. Care este rolul unui Layout Manager?</div><ol class="MCAnswers"><li id="Q_72_0"><button class="FuncButton" id="Q_72_0_Btn" onclick="CheckMCAnswer(72,0,this)">?</button>&#160;&#160;decide modul in care sunt implementate componentele in cadrul unui container</li><li id="Q_72_1"><button class="FuncButton" id="Q_72_1_Btn" onclick="CheckMCAnswer(72,1,this)">?</button>&#160;&#160;cu ajutorul lui s epot specifica culorile si fontul containerelor?</li><li id="Q_72_2"><button class="FuncButton" id="Q_72_2_Btn" onclick="CheckMCAnswer(72,2,this)">?</button>&#160;&#160;cu ajutorul lui se pot gestiona servleturile</li></ol></li>
+<li class="QuizQuestion" id="Q_73" style="display: none;"><div class="QuestionText">79. care este layoutmanagerul implicit al unui container</div><ol class="MCAnswers"><li id="Q_73_0"><button class="FuncButton" id="Q_73_0_Btn" onclick="CheckMCAnswer(73,0,this)">?</button>&#160;&#160;flowlayout</li><li id="Q_73_1"><button class="FuncButton" id="Q_73_1_Btn" onclick="CheckMCAnswer(73,1,this)">?</button>&#160;&#160;gridlayout</li><li id="Q_73_2"><button class="FuncButton" id="Q_73_2_Btn" onclick="CheckMCAnswer(73,2,this)">?</button>&#160;&#160;bordlayout</li></ol></li>
+<li class="QuizQuestion" id="Q_74" style="display: none;"><div class="QuestionText">80. borderlayout:</div><ol class="MCAnswers"><li id="Q_74_0"><button class="FuncButton" id="Q_74_0_Btn" onclick="CheckMCAnswer(74,0,this)">?</button>&#160;&#160;imparte container-ul in 5 regiuni (sus, jos, stanga, dreapta si centru)</li><li id="Q_74_1"><button class="FuncButton" id="Q_74_1_Btn" onclick="CheckMCAnswer(74,1,this)">?</button>&#160;&#160;amplaseaza controalele unul langa altul</li><li id="Q_74_2"><button class="FuncButton" id="Q_74_2_Btn" onclick="CheckMCAnswer(74,2,this)">?</button>&#160;&#160;amplaseaza controalele unul sub altul</li></ol></li>
+<li class="QuizQuestion" id="Q_75" style="display: none;"><div class="QuestionText">81. Flowlayout</div><ol class="MCAnswers"><li id="Q_75_0"><button class="FuncButton" id="Q_75_0_Btn" onclick="CheckMCAnswer(75,0,this)">?</button>&#160;&#160;amplaseaza controalele la coordonate specificate de utluzator(x,y)</li><li id="Q_75_1"><button class="FuncButton" id="Q_75_1_Btn" onclick="CheckMCAnswer(75,1,this)">?</button>&#160;&#160;amplaseaza controalele unul langa altul iar daca nu mai au loc pe orizontala sunt trecute pe urmatorul rand</li><li id="Q_75_2"><button class="FuncButton" id="Q_75_2_Btn" onclick="CheckMCAnswer(75,2,this)">?</button>&#160;&#160;amplaseaza controalele in celulele unui tabel</li></ol></li>
+<li class="QuizQuestion" id="Q_76" style="display: none;"><div class="QuestionText">82. myframe este un obiect de tip JFrame. Linia de cod:<br />myframe.getcontentpane().setlayout(null):</div><ol class="MCAnswers"><li id="Q_76_0"><button class="FuncButton" id="Q_76_0_Btn" onclick="CheckMCAnswer(76,0,this)">?</button>&#160;&#160;dezactiveaza layoutul pentru a putea adauga componente in myframe</li><li id="Q_76_1"><button class="FuncButton" id="Q_76_1_Btn" onclick="CheckMCAnswer(76,1,this)">?</button>&#160;&#160;dezactiveaza orice layoutmanager cu scopul de a putea amplasa controalele din contalinerul lui in pozitii absolute</li><li id="Q_76_2"><button class="FuncButton" id="Q_76_2_Btn" onclick="CheckMCAnswer(76,2,this)">?</button>&#160;&#160;...</li></ol></li>
+<li class="QuizQuestion" id="Q_77" style="display: none;"><div class="QuestionText">83. incercuiti afirmatia corecta:</div><ol class="MCAnswers"><li id="Q_77_0"><button class="FuncButton" id="Q_77_0_Btn" onclick="CheckMCAnswer(77,0,this)">?</button>&#160;&#160;metodele statice sunt similare functiilor obisnuite in C</li><li id="Q_77_1"><button class="FuncButton" id="Q_77_1_Btn" onclick="CheckMCAnswer(77,1,this)">?</button>&#160;&#160;metodele statice nu pot fi apelate decat din lte metode ale clasei care le contine</li><li id="Q_77_2"><button class="FuncButton" id="Q_77_2_Btn" onclick="CheckMCAnswer(77,2,this)">?</button>&#160;&#160;metodele statice nu pot contine declaratii de variabile</li></ol></li>
+<li class="QuizQuestion" id="Q_78" style="display: none;"><div class="QuestionText">84. incercuiti afirmatia corecta:</div><ol class="MCAnswers"><li id="Q_78_0"><button class="FuncButton" id="Q_78_0_Btn" onclick="CheckMCAnswer(78,0,this)">?</button>&#160;&#160;o clasa abstracta contine doar signaturi de metode</li><li id="Q_78_1"><button class="FuncButton" id="Q_78_1_Btn" onclick="CheckMCAnswer(78,1,this)">?</button>&#160;&#160;o clasa abstracta contine campuri si metode normale(pentru care se specifica o implementare dar si modele de metode care urmeaza sa fie implementate in mod obligatoriu de clasele care extind clasa abstracta)</li><li id="Q_78_2"><button class="FuncButton" id="Q_78_2_Btn" onclick="CheckMCAnswer(78,2,this)">?</button>&#160;&#160;o clasa abstracta nu contine metode</li></ol></li>
+<li class="QuizQuestion" id="Q_79" style="display: none;"><div class="QuestionText">85. incercuiti afirmatia corecta:</div><ol class="MCAnswers"><li id="Q_79_0"><button class="FuncButton" id="Q_79_0_Btn" onclick="CheckMCAnswer(79,0,this)">?</button>&#160;&#160;o interfata este formata din constante si signaturi de metode</li><li id="Q_79_1"><button class="FuncButton" id="Q_79_1_Btn" onclick="CheckMCAnswer(79,1,this)">?</button>&#160;&#160;termenul interface se utilizeaza doar cu privire la aspectul aplicatiei</li><li id="Q_79_2"><button class="FuncButton" id="Q_79_2_Btn" onclick="CheckMCAnswer(79,2,this)">?</button>&#160;&#160;o interfata contine atat metode neimplementate cat si metode implementate</li></ol></li>
+<li class="QuizQuestion" id="Q_80" style="display: none;"><div class="QuestionText">86. o clasa abstracta poate fi:</div><ol class="MCAnswers"><li id="Q_80_0"><button class="FuncButton" id="Q_80_0_Btn" onclick="CheckMCAnswer(80,0,this)">?</button>&#160;&#160;extinsa doar de o alta clasa abstracta</li><li id="Q_80_1"><button class="FuncButton" id="Q_80_1_Btn" onclick="CheckMCAnswer(80,1,this)">?</button>&#160;&#160;extinsa doar de o interfata</li><li id="Q_80_2"><button class="FuncButton" id="Q_80_2_Btn" onclick="CheckMCAnswer(80,2,this)">?</button>&#160;&#160;extinsa de o alta clasa abstracta sau de o clasa normala</li></ol></li>
+<li class="QuizQuestion" id="Q_81" style="display: none;"><div class="QuestionText">87. o metoda abstracta poate fi plasata:</div><ol class="MCAnswers"><li id="Q_81_0"><button class="FuncButton" id="Q_81_0_Btn" onclick="CheckMCAnswer(81,0,this)">?</button>&#160;&#160;doar intr-o clasa abstracta</li><li id="Q_81_1"><button class="FuncButton" id="Q_81_1_Btn" onclick="CheckMCAnswer(81,1,this)">?</button>&#160;&#160;in interfete si in orice clasa</li><li id="Q_81_2"><button class="FuncButton" id="Q_81_2_Btn" onclick="CheckMCAnswer(81,2,this)">?</button>&#160;&#160;in orice &#x2026;</li></ol></li>
+<li class="QuizQuestion" id="Q_82" style="display: none;"><div class="QuestionText">88. ce cuvinte cheie/modificatori de acces au in mod implicit variabilele membre din interfete:</div><ol class="MCAnswers"><li id="Q_82_0"><button class="FuncButton" id="Q_82_0_Btn" onclick="CheckMCAnswer(82,0,this)">?</button>&#160;&#160;public</li><li id="Q_82_1"><button class="FuncButton" id="Q_82_1_Btn" onclick="CheckMCAnswer(82,1,this)">?</button>&#160;&#160;private</li><li id="Q_82_2"><button class="FuncButton" id="Q_82_2_Btn" onclick="CheckMCAnswer(82,2,this)">?</button>&#160;&#160;protected</li></ol></li>
+<li class="QuizQuestion" id="Q_83" style="display: none;"><div class="QuestionText">89. &#x2026;.<br />class NumeClasa<br />{<br />public static nr;<br />}<br />class main<br />{ public static void main(){<br />NumeClasa.nr=5;<br />}</div><ol class="MCAnswers"><li id="Q_83_0"><button class="FuncButton" id="Q_83_0_Btn" onclick="CheckMCAnswer(83,0,this)">?</button>&#160;&#160;...</li><li id="Q_83_1"><button class="FuncButton" id="Q_83_1_Btn" onclick="CheckMCAnswer(83,1,this)">?</button>&#160;&#160;Corecta. Variabilele membru statice, apartin claei nu obiectelor si este recomandata accesarea lor utilizand numele clasei care le contine</li><li id="Q_83_2"><button class="FuncButton" id="Q_83_2_Btn" onclick="CheckMCAnswer(83,2,this)">?</button>&#160;&#160;...</li></ol></li>
+<li class="QuizQuestion" id="Q_84" style="display: none;"><div class="QuestionText">71: Se considera ca pers este o colectie de elemente de tip List. Cum poate fi ordonata automat aceasta colectie? </div><ol class="MCAnswers"><li id="Q_84_0"><button class="FuncButton" id="Q_84_0_Btn" onclick="CheckMCAnswer(84,0,this)">?</button>&#160;&#160;Collections.sort(pers, new Compara_nume()); unde Compara_Nume este o clasa ce implementeaza interfata Comparator</li><li id="Q_84_1"><button class="FuncButton" id="Q_84_1_Btn" onclick="CheckMCAnswer(84,1,this)">?</button>&#160;&#160;...</li><li id="Q_84_2"><button class="FuncButton" id="Q_84_2_Btn" onclick="CheckMCAnswer(84,2,this)">?</button>&#160;&#160;...</li></ol></li>
+<li class="QuizQuestion" id="Q_85" style="display: none;"><div class="QuestionText">82. Metoda doPost() este apelata de fiecare data cand:</div><ol class="MCAnswers"><li id="Q_85_0"><button class="FuncButton" id="Q_85_0_Btn" onclick="CheckMCAnswer(85,0,this)">?</button>&#160;&#160;Apare o cerere HTTP de tip POST primita de servlet</li><li id="Q_85_1"><button class="FuncButton" id="Q_85_1_Btn" onclick="CheckMCAnswer(85,1,this)">?</button>&#160;&#160;?</li><li id="Q_85_2"><button class="FuncButton" id="Q_85_2_Btn" onclick="CheckMCAnswer(85,2,this)">?</button>&#160;&#160;?</li></ol></li>
+<li class="QuizQuestion" id="Q_86" style="display: none;"><div class="QuestionText">89. Care este rolul unui DTD ( Document Type Definition)? </div><ol class="MCAnswers"><li id="Q_86_0"><button class="FuncButton" id="Q_86_0_Btn" onclick="CheckMCAnswer(86,0,this)">?</button>&#160;&#160;?</li><li id="Q_86_1"><button class="FuncButton" id="Q_86_1_Btn" onclick="CheckMCAnswer(86,1,this)">?</button>&#160;&#160;De a asigura ca fisierul XML respecta o anumita structura</li><li id="Q_86_2"><button class="FuncButton" id="Q_86_2_Btn" onclick="CheckMCAnswer(86,2,this)">?</button>&#160;&#160;?</li></ol></li>
+<li class="QuizQuestion" id="Q_87" style="display: none;"><div class="QuestionText">90. Ce se intelege prin DOM ( Document Object Model) ? </div><ol class="MCAnswers"><li id="Q_87_0"><button class="FuncButton" id="Q_87_0_Btn" onclick="CheckMCAnswer(87,0,this)">?</button>&#160;&#160;Este un standard stabilit de consortiul WEB si contine interfete pentru manipularea arborelui de obiecte asociat unui document XML</li><li id="Q_87_1"><button class="FuncButton" id="Q_87_1_Btn" onclick="CheckMCAnswer(87,1,this)">?</button>&#160;&#160;?</li><li id="Q_87_2"><button class="FuncButton" id="Q_87_2_Btn" onclick="CheckMCAnswer(87,2,this)">?</button>&#160;&#160;?</li></ol></li>
+<li class="QuizQuestion" id="Q_88" style="display: none;"><div class="QuestionText">1. Se considera clasele:<br />class Vapor {/*...*/}<br />class VasDeCroaziera extends Vapor {/*...*/}<br />class MainApp {<br />public static void main(String []args) {<br />Vapor a = new Vapor();<br />VadDeCroaziera b = new VasDeCroaziera();<br />a = b;<br />}<br />}<br />Atribuirea din linia 3 a functiei main() este:</div><ol class="MCAnswers"><li id="Q_88_0"><button class="FuncButton" id="Q_88_0_Btn" onclick="CheckMCAnswer(88,0,this)">?</button>&#160;&#160;corecta</li><li id="Q_88_1"><button class="FuncButton" id="Q_88_1_Btn" onclick="CheckMCAnswer(88,1,this)">?</button>&#160;&#160;incorecta</li></ol></li>
+<li class="QuizQuestion" id="Q_89" style="display: none;"><div class="QuestionText">3. Incercuiti afirmatia corecta cu privire la interfetele functionale:</div><ol class="MCAnswers"><li id="Q_89_0"><button class="FuncButton" id="Q_89_0_Btn" onclick="CheckMCAnswer(89,0,this)">?</button>&#160;&#160;interfetele functionale sunt interfete care pot avea oricate metode abstracte si care <br />pot sa fie implementate prin expresii Lambda</li><li id="Q_89_1"><button class="FuncButton" id="Q_89_1_Btn" onclick="CheckMCAnswer(89,1,this)">?</button>&#160;&#160;interfete functionale sunt interfete care au maxim o metoda abstracta si a caror <br />implementare poate fi specificata prin expresiile Lambda</li><li id="Q_89_2"><button class="FuncButton" id="Q_89_2_Btn" onclick="CheckMCAnswer(89,2,this)">?</button>&#160;&#160;interfetele functionale sunt interfete care contin doar functii implicite</li></ol></li>
+<li class="QuizQuestion" id="Q_90" style="display: none;"><div class="QuestionText">5. Selectati modul corect de declarare si instantiere a unei colectii de obiecte de tip <br />List care poate contine doar intregi:</div><ol class="MCAnswers"><li id="Q_90_0"><button class="FuncButton" id="Q_90_0_Btn" onclick="CheckMCAnswer(90,0,this)">?</button>&#160;&#160;List &lt;Integer lista = new ArrayList &lt;Integer();</li><li id="Q_90_1"><button class="FuncButton" id="Q_90_1_Btn" onclick="CheckMCAnswer(90,1,this)">?</button>&#160;&#160;List &lt;int lista = new ArrayList &lt;int();</li><li id="Q_90_2"><button class="FuncButton" id="Q_90_2_Btn" onclick="CheckMCAnswer(90,2,this)">?</button>&#160;&#160;List &lt;Integer lista = new List &lt;Integer();</li><li id="Q_90_3"><button class="FuncButton" id="Q_90_3_Btn" onclick="CheckMCAnswer(90,3,this)">?</button>&#160;&#160;List &lt;int lista = new List &lt;int();</li></ol></li>
+<li class="QuizQuestion" id="Q_91" style="display: none;"><div class="QuestionText">7. Precizati ce va afisa secventa de mai jos:<br />Vector v = new Vector();<br />for(int i = 0; i &lt; 15; i++)<br />v.add(i);<br />System.out.println(v.capacity());</div><ol class="MCAnswers"><li id="Q_91_0"><button class="FuncButton" id="Q_91_0_Btn" onclick="CheckMCAnswer(91,0,this)">?</button>&#160;&#160;10</li><li id="Q_91_1"><button class="FuncButton" id="Q_91_1_Btn" onclick="CheckMCAnswer(91,1,this)">?</button>&#160;&#160;14</li><li id="Q_91_2"><button class="FuncButton" id="Q_91_2_Btn" onclick="CheckMCAnswer(91,2,this)">?</button>&#160;&#160;20</li><li id="Q_91_3"><button class="FuncButton" id="Q_91_3_Btn" onclick="CheckMCAnswer(91,3,this)">?</button>&#160;&#160;15</li></ol></li>
+<li class="QuizQuestion" id="Q_92" style="display: none;"><div class="QuestionText">8. Care va fi valoarea variabilei a dupa executarea liniilor de cod de mai jos:<br />int a = 8;<br />a&gt;&gt;&gt;=1;</div><ol class="MCAnswers"><li id="Q_92_0"><button class="FuncButton" id="Q_92_0_Btn" onclick="CheckMCAnswer(92,0,this)">?</button>&#160;&#160;2</li><li id="Q_92_1"><button class="FuncButton" id="Q_92_1_Btn" onclick="CheckMCAnswer(92,1,this)">?</button>&#160;&#160;linia de cod e gresita si va determina eroare de compilare</li><li id="Q_92_2"><button class="FuncButton" id="Q_92_2_Btn" onclick="CheckMCAnswer(92,2,this)">?</button>&#160;&#160;1</li><li id="Q_92_3"><button class="FuncButton" id="Q_92_3_Btn" onclick="CheckMCAnswer(92,3,this)">?</button>&#160;&#160;8</li><li id="Q_92_4"><button class="FuncButton" id="Q_92_4_Btn" onclick="CheckMCAnswer(92,4,this)">?</button>&#160;&#160;4</li></ol></li>
+<li class="QuizQuestion" id="Q_93" style="display: none;"><div class="QuestionText">9. Selectati afirmatia corecta cu privire la codul de mai jos:<br />public interface Interfata {<br />int x = 7;<br />public void metoda();<br />}<br />class Implementare implements Interfata {<br />public void metoda() {<br />x++;<br />}<br />}<br />class MainApp {<br />public static void main (String []args) {<br />Interfata i = new Implementare();<br />i.metoda();<br />system.out.println(i.x);<br />}<br />}<br /></div><ol class="MCAnswers"><li id="Q_93_0"><button class="FuncButton" id="Q_93_0_Btn" onclick="CheckMCAnswer(93,0,this)">?</button>&#160;&#160;incrementarea din functia metoda() a clasei Implementare nu este permisa</li><li id="Q_93_1"><button class="FuncButton" id="Q_93_1_Btn" onclick="CheckMCAnswer(93,1,this)">?</button>&#160;&#160;instantierea din prima linie a functiei main() este gresita</li><li id="Q_93_2"><button class="FuncButton" id="Q_93_2_Btn" onclick="CheckMCAnswer(93,2,this)">?</button>&#160;&#160;campul x nu este accesibil in linia 3 a functiei main</li><li id="Q_93_3"><button class="FuncButton" id="Q_93_3_Btn" onclick="CheckMCAnswer(93,3,this)">?</button>&#160;&#160;va afisa valoarea 7 pe ecran</li><li id="Q_93_4"><button class="FuncButton" id="Q_93_4_Btn" onclick="CheckMCAnswer(93,4,this)">?</button>&#160;&#160;va afisa valoarea 8 pe ecran</li></ol></li>
+<li class="QuizQuestion" id="Q_94" style="display: none;"><div class="QuestionText">10. Selectati afirmatia corecta cu privire la clasa Optional, clasa introdusa in Java 8:</div><ol class="MCAnswers"><li id="Q_94_0"><button class="FuncButton" id="Q_94_0_Btn" onclick="CheckMCAnswer(94,0,this)">?</button>&#160;&#160;clasa Optional ofera facilitati pentru scrierea unui cod fara blocuri try...catch</li><li id="Q_94_1"><button class="FuncButton" id="Q_94_1_Btn" onclick="CheckMCAnswer(94,1,this)">?</button>&#160;&#160;clasa Optional ofera facilitati pentru scrierea unui cod fara multe teste ale null-ului</li><li id="Q_94_2"><button class="FuncButton" id="Q_94_2_Btn" onclick="CheckMCAnswer(94,2,this)">?</button>&#160;&#160;clasa Optional este o clasa iterator speciala care permite procesarea colectiilor de <br />obiecte intr-o maniera functionala</li></ol></li>
+<li class="QuizQuestion" id="Q_95" style="display: none;"><div class="QuestionText">11. Se considera clasa Test cu codul de mai jos. Precizati efectul rularii secventei din <br />programul principal.<br />package examen;<br />class test {<br />int x = 0;<br />void metoda() {<br />this.x += 2;<br />}<br />}<br />class MainApp {<br />public static void main (String[] args) {<br />Test t = new Test();<br />t.metoda();<br />System.out.println(t.x);<br />}<br />}<br /></div><ol class="MCAnswers"><li id="Q_95_0"><button class="FuncButton" id="Q_95_0_Btn" onclick="CheckMCAnswer(95,0,this)">?</button>&#160;&#160;va afisa 0 pe ecran</li><li id="Q_95_1"><button class="FuncButton" id="Q_95_1_Btn" onclick="CheckMCAnswer(95,1,this)">?</button>&#160;&#160;va afisa 2 pe ecran //din cauza ca e public daca nu se pune nimic in fata la var <br />declarate din clasa</li><li id="Q_95_2"><button class="FuncButton" id="Q_95_2_Btn" onclick="CheckMCAnswer(95,2,this)">?</button>&#160;&#160;va determina eroare de compilare pentru ca variabila x neavand modificator de acces <br />este privata si deci neaccesibila din clasa MainApp</li></ol></li>
+<li class="QuizQuestion" id="Q_96" style="display: none;"><div class="QuestionText">12. Incercuiti afirmatia corecta cu privire la codul de mai jos:<br />class Artist <T, S> {<br />T nume;<br />S varsta;<br />public Artist(T nume, S varsta) {<br />this.nume = nume;<br />this.varsta = varsta;<br />}<br />public String tostring {<br />return nume + &#x201C;, &#x201C; + varsta;<br />}<br />}<br />class MainApp {<br />public static void main (String []args) {<br />Artist <String, Integer> artist = new Artist <String, Integer> (&#x201C;Ionel&#x201D;, 20);<br />System.out.println(arist);<br />}<br />}<br /></div><ol class="MCAnswers"><li id="Q_96_0"><button class="FuncButton" id="Q_96_0_Btn" onclick="CheckMCAnswer(96,0,this)">?</button>&#160;&#160;nu se va afisa Ionel 20, pe ecran pentru ca a fost omis apelul metodei toString()</li><li id="Q_96_1"><button class="FuncButton" id="Q_96_1_Btn" onclick="CheckMCAnswer(96,1,this)">?</button>&#160;&#160;modul de instantiere a obiectului artist este gresit</li><li id="Q_96_2"><button class="FuncButton" id="Q_96_2_Btn" onclick="CheckMCAnswer(96,2,this)">?</button>&#160;&#160;definitia clasei Artist este gresita</li><li id="Q_96_3"><button class="FuncButton" id="Q_96_3_Btn" onclick="CheckMCAnswer(96,3,this)">?</button>&#160;&#160;va afisa Ionel, 20 pe ecran</li></ol></li>
+<li class="QuizQuestion" id="Q_97" style="display: none;"><div class="QuestionText">13. Precizati ce va afisa secventa:<br /><br />class OClasa {<br />private static int x;<br />private int y;<br />public OClasa(int x, int y) {<br />this.x = x; this.y = y;<br />}<br />public int GetX() { return x; }<br />public int GetY() { return y; }<br />}<br />class MainOClasa {<br />public static void main (String[] args) {<br />OClasa ob1 = new OClasa(1, 3);<br />OClasa ob2 = new OClasa(2, 4);<br />int xx = ob1.getX() + ob2.getX();<br />int yy = ob1.getY() + ob2.getY();<br />System.out.println(xx + &#x201C; &#x201C; + yy);<br />}<br />}</div><ol class="MCAnswers"><li id="Q_97_0"><button class="FuncButton" id="Q_97_0_Btn" onclick="CheckMCAnswer(97,0,this)">?</button>&#160;&#160;5 7</li><li id="Q_97_1"><button class="FuncButton" id="Q_97_1_Btn" onclick="CheckMCAnswer(97,1,this)">?</button>&#160;&#160;4 7</li><li id="Q_97_2"><button class="FuncButton" id="Q_97_2_Btn" onclick="CheckMCAnswer(97,2,this)">?</button>&#160;&#160;5 5</li><li id="Q_97_3"><button class="FuncButton" id="Q_97_3_Btn" onclick="CheckMCAnswer(97,3,this)">?</button>&#160;&#160;3 7</li><li id="Q_97_4"><button class="FuncButton" id="Q_97_4_Btn" onclick="CheckMCAnswer(97,4,this)">?</button>&#160;&#160;Secventa nu poate fi rulata</li></ol></li>
+<li class="QuizQuestion" id="Q_98" style="display: none;"><div class="QuestionText">14. Precizati ce va afisa secventa:<br />int []a = {1, 2, 3};<br />int []b = {4, 5, 6};<br />b = a;<br />a[0] = 99;<br />System.out.println(&#x201C;a[0] = &#x201C; + a[0] + &#x201C;b[0] = &#x201C; + b[0]);</div><ol class="MCAnswers"><li id="Q_98_0"><button class="FuncButton" id="Q_98_0_Btn" onclick="CheckMCAnswer(98,0,this)">?</button>&#160;&#160;va genera eroare de compilare, atribuirea b = a; nefiind permisa</li><li id="Q_98_1"><button class="FuncButton" id="Q_98_1_Btn" onclick="CheckMCAnswer(98,1,this)">?</button>&#160;&#160;a[0] = 99 b[0] = 4</li><li id="Q_98_2"><button class="FuncButton" id="Q_98_2_Btn" onclick="CheckMCAnswer(98,2,this)">?</button>&#160;&#160;a[0] = 99 b[0] = 1</li><li id="Q_98_3"><button class="FuncButton" id="Q_98_3_Btn" onclick="CheckMCAnswer(98,3,this)">?</button>&#160;&#160;a[0] = 99 b[0] = 99</li></ol></li>
+<li class="QuizQuestion" id="Q_99" style="display: none;"><div class="QuestionText">15. Incercuiti afirmatia corecta cu privire la urmatoarele linii de cod:<br />float f = 2.3333;<br />System.out.printf(&#x201C;%.2f&#x201D;, f);<br /></div><ol class="MCAnswers"><li id="Q_99_0"><button class="FuncButton" id="Q_99_0_Btn" onclick="CheckMCAnswer(99,0,this)">?</button>&#160;&#160;va afisa 2.33 pe ecran</li><li id="Q_99_1"><button class="FuncButton" id="Q_99_1_Btn" onclick="CheckMCAnswer(99,1,this)">?</button>&#160;&#160;va genera eroare de compilare datorita apelului func&#x021B;iei printf, functie care nu exista <br />in Java</li><li id="Q_99_2"><button class="FuncButton" id="Q_99_2_Btn" onclick="CheckMCAnswer(99,2,this)">?</button>&#160;&#160;va genera eroare de compilare datorita incercarii de a initializa o variabila de tip float <br />cu o valoare de tip double</li></ol></li>
+<li class="QuizQuestion" id="Q_100" style="display: none;"><div class="QuestionText">16. Precizati efectul rularii secventei:<br />Integer a = new Integer(2);<br />int b = 3;<br />a = b;<br />System.out.println(a);<br /></div><ol class="MCAnswers"><li id="Q_100_0"><button class="FuncButton" id="Q_100_0_Btn" onclick="CheckMCAnswer(100,0,this)">?</button>&#160;&#160;va genera eroare de compilare datorita incercarii de a da unui obiect o valoare <br />primitiva</li><li id="Q_100_1"><button class="FuncButton" id="Q_100_1_Btn" onclick="CheckMCAnswer(100,1,this)">?</button>&#160;&#160;va afisa 2 pe ecran</li><li id="Q_100_2"><button class="FuncButton" id="Q_100_2_Btn" onclick="CheckMCAnswer(100,2,this)">?</button>&#160;&#160;va afisa 3 pe ecran</li></ol></li>
+<li class="QuizQuestion" id="Q_101" style="display: none;"><div class="QuestionText">17. Se considera clasele:<br />class Persoana {<br />String nume;<br />public Persoana() {<br />nume = &#x201C;Ionel&#x201D;;<br />}<br />}<br />class Angajat extends Persoana {}<br />public class MainApp {<br />public static void main(String[] args) {<br />Angajat a = new Angajat();<br />System.out.println(a.nume);<br />}<br />}<br /></div><ol class="MCAnswers"><li id="Q_101_0"><button class="FuncButton" id="Q_101_0_Btn" onclick="CheckMCAnswer(101,0,this)">?</button>&#160;&#160;va genera eroare de compilare, numele nefiind accesibil din clasa Angajat</li><li id="Q_101_1"><button class="FuncButton" id="Q_101_1_Btn" onclick="CheckMCAnswer(101,1,this)">?</button>&#160;&#160;intr-o alta clasa nu se poate declara obiect de tipul clasei interioare</li><li id="Q_101_2"><button class="FuncButton" id="Q_101_2_Btn" onclick="CheckMCAnswer(101,2,this)">?</button>&#160;&#160;variabila a, nu poate sa fie accesata din ClasaInterioara pentru ca este privata</li><li id="Q_101_3"><button class="FuncButton" id="Q_101_3_Btn" onclick="CheckMCAnswer(101,3,this)">?</button>&#160;&#160;intr-o alta clasa se poate declara obiect de tipul clasei interioare in felul urmator:<br />ClasaExterioara.ClasaInterioara o = new ClasaExterioara.ClasaInterioara();</li></ol></li>
+<li class="QuizQuestion" id="Q_102" style="display: none;"><div class="QuestionText">18. Se considera clasele imbricate de mai jos:<br />public class ClasaExterioara { // Outer class<br />private int a = 3;<br />class ClasaInterioara { // Inner class<br />private int b = 4;<br />public void afisare() {<br />System.out.println(&#x201C;a = &#x201C; + a + &#x201C;, b=&#x201D; + b);<br />}<br />}<br />}</div><ol class="MCAnswers"><li id="Q_102_0"><button class="FuncButton" id="Q_102_0_Btn" onclick="CheckMCAnswer(102,0,this)">?</button>&#160;&#160;intr-o alta clasa se poate declara obiect de tipul clasei interioare in felul urmator:<br />ClasaExterioara o1 = new ClasaExterioara(0;<br />ClasaExterioara.ClasaInterioara o2 = o1.new ClasaInterioara();</li><li id="Q_102_1"><button class="FuncButton" id="Q_102_1_Btn" onclick="CheckMCAnswer(102,1,this)">?</button>&#160;&#160;intr-o alta clasa nu se poate declara obiect de tipul clasei interioare</li><li id="Q_102_2"><button class="FuncButton" id="Q_102_2_Btn" onclick="CheckMCAnswer(102,2,this)">?</button>&#160;&#160;variabila a, nu poate sa fie accesata din ClasaInterioara pentru ca este privata</li><li id="Q_102_3"><button class="FuncButton" id="Q_102_3_Btn" onclick="CheckMCAnswer(102,3,this)">?</button>&#160;&#160;intr-o alta clasa se poate declara obiect de tipul clasei interioare in felul urmator:<br />ClasaExterioara.ClasaInterioara o = new ClasaExterioara.ClasaInterioara();</li></ol></li>
+<li class="QuizQuestion" id="Q_103" style="display: none;"><div class="QuestionText">19. Precizati cum va rula secventa:<br />String s=&#x201D;abc&#x201D;;<br />s.toUpperCase();<br />System.out.println(s);</div><ol class="MCAnswers"><li id="Q_103_0"><button class="FuncButton" id="Q_103_0_Btn" onclick="CheckMCAnswer(103,0,this)">?</button>&#160;&#160;va afisa ABC pe ecran</li><li id="Q_103_1"><button class="FuncButton" id="Q_103_1_Btn" onclick="CheckMCAnswer(103,1,this)">?</button>&#160;&#160;va afisa abc pe ecran</li><li id="Q_103_2"><button class="FuncButton" id="Q_103_2_Btn" onclick="CheckMCAnswer(103,2,this)">?</button>&#160;&#160;va genera eroare de compilare pentru ca intializarea lui s trebuie sa se faca <br />String s = new String(&#x201C;abc&#x201D;);</li></ol></li>
+<li class="QuizQuestion" id="Q_104" style="display: none;"><div class="QuestionText">20. Precizati ce va afisa secventa:<br />int a=015;<br />System.out.println(a);</div><ol class="MCAnswers"><li id="Q_104_0"><button class="FuncButton" id="Q_104_0_Btn" onclick="CheckMCAnswer(104,0,this)">?</button>&#160;&#160;015</li><li id="Q_104_1"><button class="FuncButton" id="Q_104_1_Btn" onclick="CheckMCAnswer(104,1,this)">?</button>&#160;&#160;15</li><li id="Q_104_2"><button class="FuncButton" id="Q_104_2_Btn" onclick="CheckMCAnswer(104,2,this)">?</button>&#160;&#160;13</li></ol></li>
+<li class="QuizQuestion" id="Q_105" style="display: none;"><div class="QuestionText">48.Precizati care este IDE-ul official pentru dezvoltarea aplicatiilor Android:</div><ol class="MCAnswers"><li id="Q_105_0"><button class="FuncButton" id="Q_105_0_Btn" onclick="CheckMCAnswer(105,0,this)">?</button>&#160;&#160;Eclipse cu plugin instalat pt dezvoltarea de aplicatii Android</li><li id="Q_105_1"><button class="FuncButton" id="Q_105_1_Btn" onclick="CheckMCAnswer(105,1,this)">?</button>&#160;&#160;NetBeans</li><li id="Q_105_2"><button class="FuncButton" id="Q_105_2_Btn" onclick="CheckMCAnswer(105,2,this)">?</button>&#160;&#160;Android Studio</li></ol></li>
+<li class="QuizQuestion" id="Q_106" style="display: none;"><div class="QuestionText">49.Ce notatie poate fi utilizata pt a accesa o resursa a unei aplicatii Android in codul Java?</div><ol class="MCAnswers"><li id="Q_106_0"><button class="FuncButton" id="Q_106_0_Btn" onclick="CheckMCAnswer(106,0,this)">?</button>&#160;&#160;Rescource.nume_resursa</li><li id="Q_106_1"><button class="FuncButton" id="Q_106_1_Btn" onclick="CheckMCAnswer(106,1,this)">?</button>&#160;&#160;R tipul_resursei.nume_resursa</li><li id="Q_106_2"><button class="FuncButton" id="Q_106_2_Btn" onclick="CheckMCAnswer(106,2,this)">?</button>&#160;&#160;Resource.id_resursa</li></ol></li>
+<li class="QuizQuestion" id="Q_107" style="display: none;"><div class="QuestionText">50.Incercuiti clasa care ofera metode cu care se pot adauga,sterge,actualiza,interoga datele<br />dintr-o tabela SQL Lite in aplicatia Android:<br /></div><ol class="MCAnswers"><li id="Q_107_0"><button class="FuncButton" id="Q_107_0_Btn" onclick="CheckMCAnswer(107,0,this)">?</button>&#160;&#160;SQLiteOpenHelper</li><li id="Q_107_1"><button class="FuncButton" id="Q_107_1_Btn" onclick="CheckMCAnswer(107,1,this)">?</button>&#160;&#160;R tipul_resursei.nume_resursa</li><li id="Q_107_2"><button class="FuncButton" id="Q_107_2_Btn" onclick="CheckMCAnswer(107,2,this)">?</button>&#160;&#160;Resource.id_resursa</li></ol></li>
+<li class="QuizQuestion" id="Q_108" style="display: none;"><div class="QuestionText">17.Ce se va afisa?<br />int culoare=1;<br />switch(culoare)<br />{<br />case 1:sysout(&#x201C; alb &#x201C;);<br />case 2:sysout(&#x201C;rosu&#x201C;);<br />case 3:sysout(&#x201C; negru &#x201C;);<br />}<br /></div><ol class="MCAnswers"><li id="Q_108_0"><button class="FuncButton" id="Q_108_0_Btn" onclick="CheckMCAnswer(108,0,this)">?</button>&#160;&#160;alb</li><li id="Q_108_1"><button class="FuncButton" id="Q_108_1_Btn" onclick="CheckMCAnswer(108,1,this)">?</button>&#160;&#160;alb<br />rosu</li><li id="Q_108_2"><button class="FuncButton" id="Q_108_2_Btn" onclick="CheckMCAnswer(108,2,this)">?</button>&#160;&#160;alb<br />rosu<br />negru</li></ol></li>
+<li class="QuizQuestion" id="Q_109" style="display: none;"><div class="QuestionText">26.Ce se va afisa?<br />public class OClasa1 {<br />private static int x;<br />private int y;<br />public OClasa1(int x, int y)<br />{<br />this.x = x;<br />this.y = y;<br />}<br />public int getX() {<br />return x;<br />}<br />public int getY() {<br />return y;<br />}<br />}<br />public class Main {<br />public static void main(String[] args) {<br />OClasa1 ob1 = new OClasa1(1,3);<br />OClasa1 ob2 = new OClasa1(2,4);<br />int xx = ob1.getX() + ob2.getX();<br />int yy = ob1.getY() + ob2.getY();<br />System.out.println(xx+" "+yy);<br />}<br />}</div><ol class="MCAnswers"><li id="Q_109_0"><button class="FuncButton" id="Q_109_0_Btn" onclick="CheckMCAnswer(109,0,this)">?</button>&#160;&#160;5 7</li><li id="Q_109_1"><button class="FuncButton" id="Q_109_1_Btn" onclick="CheckMCAnswer(109,1,this)">?</button>&#160;&#160;4 7</li><li id="Q_109_2"><button class="FuncButton" id="Q_109_2_Btn" onclick="CheckMCAnswer(109,2,this)">?</button>&#160;&#160;3 7</li><li id="Q_109_3"><button class="FuncButton" id="Q_109_3_Btn" onclick="CheckMCAnswer(109,3,this)">?</button>&#160;&#160;5 5</li><li id="Q_109_4"><button class="FuncButton" id="Q_109_4_Btn" onclick="CheckMCAnswer(109,4,this)">?</button>&#160;&#160;secventa nu poate fi rulata</li></ol></li>
+<li class="QuizQuestion" id="Q_110" style="display: none;"><div class="QuestionText">29.Precizati ce va afisa secventa:<br />double x = Math.sqrt(Math.PI);<br />int y=(x&gt;2)?1:2;<br />Sysout(Math.pow(2,y));</div><ol class="MCAnswers"><li id="Q_110_0"><button class="FuncButton" id="Q_110_0_Btn" onclick="CheckMCAnswer(110,0,this)">?</button>&#160;&#160;1.0</li><li id="Q_110_1"><button class="FuncButton" id="Q_110_1_Btn" onclick="CheckMCAnswer(110,1,this)">?</button>&#160;&#160;2.0</li><li id="Q_110_2"><button class="FuncButton" id="Q_110_2_Btn" onclick="CheckMCAnswer(110,2,this)">?</button>&#160;&#160;4.0</li></ol></li>
+<li class="QuizQuestion" id="Q_111" style="display: none;"><div class="QuestionText">30.Se considera liniile de cod de mai jos:<br />public class Chitara {<br />private int nr_corzi=6;<br />private String culoare="neagra";<br />public Chitara(int nr_corzi, String culoare)<br />{ this.nr_corzi=nr_corzi;<br /> this.culoare=culoare;<br />}<br />public String to_string()<br />{<br />return "chitara are" + nr_corzi+ "si culoarea" + culoare;<br />}<br />}<br />public static void main(String[] args) {<br />Chitara c= new Chitara();<br />System.out.println(c);<br />}</div><ol class="MCAnswers"><li id="Q_111_0"><button class="FuncButton" id="Q_111_0_Btn" onclick="CheckMCAnswer(111,0,this)">?</button>&#160;&#160;chitara are 6 corzi si culoarea neagra</li><li id="Q_111_1"><button class="FuncButton" id="Q_111_1_Btn" onclick="CheckMCAnswer(111,1,this)">?</button>&#160;&#160;va afisa diverse. Chitara @ si o valoare in hexa</li><li id="Q_111_2"><button class="FuncButton" id="Q_111_2_Btn" onclick="CheckMCAnswer(111,2,this)">?</button>&#160;&#160;secventa nu poate fi rulata</li></ol></li>
+<li class="QuizQuestion" id="Q_112" style="display: none;"><div class="QuestionText">33.Precizati ce va afisa secventa: sysout(Integer.toBinaryString(23));<br /></div><ol class="MCAnswers"><li id="Q_112_0"><button class="FuncButton" id="Q_112_0_Btn" onclick="CheckMCAnswer(112,0,this)">?</button>&#160;&#160;1111</li><li id="Q_112_1"><button class="FuncButton" id="Q_112_1_Btn" onclick="CheckMCAnswer(112,1,this)">?</button>&#160;&#160;0101</li><li id="Q_112_2"><button class="FuncButton" id="Q_112_2_Btn" onclick="CheckMCAnswer(112,2,this)">?</button>&#160;&#160;10101</li><li id="Q_112_3"><button class="FuncButton" id="Q_112_3_Btn" onclick="CheckMCAnswer(112,3,this)">?</button>&#160;&#160;10111</li><li id="Q_112_4"><button class="FuncButton" id="Q_112_4_Btn" onclick="CheckMCAnswer(112,4,this)">?</button>&#160;&#160;00100011</li></ol></li></ol>
+
+
+
+</div>
+
+</div>
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;OK&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+</html>
